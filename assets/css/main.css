@@ -3327,3 +3327,30 @@ input, select, textarea {
 			}
 
 		}
+/* Certificates Section Styles */
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.certificate {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.certificate img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.certificate img:hover {
+    transform: scale(1.05);
+}
