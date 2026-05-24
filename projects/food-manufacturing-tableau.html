@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Built a Tableau dashboard to help operational stakeholders review site-level expense and forecast performance, including MTD/YTD metrics, actuals versus forecast and $/tonne analysis.">
+  <title>Food Manufacturing & Distribution Performance Dashboard | Nikhara Inderlal</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="../index.html" class="brand" aria-label="Nikhara Inderlal home">
+        <span class="brand-mark">NI</span>
+        <span>Nikhara Inderlal<br><span>Data Analyst &amp; BI Consultant</span></span>
+      </a>
+      <button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="site-nav" data-nav-links>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../journey.html">Journey</a></li>
+          <li><a href="../writing.html">Writing</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <a class="case-back" href="../projects.html">Back to projects</a>
+        <span class="eyebrow">Tableau Dashboard</span>
+        <h1>Food Manufacturing & Distribution Performance Dashboard</h1>
+        <p class="lead">Site-level expense and forecast performance with MTD/YTD metrics, actuals vs forecast and $/tonne analysis.</p>
+        <div class="case-meta">
+          <div><strong>Sector</strong><span>Food Manufacturing</span></div>
+          <div><strong>Role</strong><span>Data Analyst</span></div>
+          <div><strong>Engagement</strong><span>Project engagement</span></div>
+          <div><strong>Tools</strong><span>Tableau, Alteryx, Calculated fields, KPI design</span></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <figure class="case-figure">
+          <img src="../assets/img/projects/food-manufacturing.svg" alt="Anonymised mock dashboard for Food Manufacturing & Distribution Performance Dashboard">
+          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
+        </figure>
+        <div class="case-body">
+          <article>
+            <section>
+              <h2>Context</h2>
+              <p>Operations leaders across multiple manufacturing and distribution sites needed a single weekly view of expense performance against forecast, with the ability to drill into specific cost categories and compare site efficiency on a normalised $/tonne basis.</p>
+            </section>
+            <section>
+              <h2>Approach</h2>
+              <p>Used Alteryx to consolidate forecast, actuals and tonnage extracts from multiple source systems, normalise category labels, and produce a clean reporting-ready dataset. Built the Tableau dashboard around a small set of clear executive KPIs with consistent variance treatment.</p>
+            </section>
+            <section>
+              <h2>Modelling &amp; preparation</h2>
+              <p>Calculated fields for MTD/YTD variance, $/tonne, and forecast-attainment percentage. Reusable parameters for time period and site, with LOD calculations to keep site benchmarks correct under filter changes.</p>
+            </section>
+            <section>
+              <h2>Validation</h2>
+              <p>Variance reconciliation against finance's manual workbook for two reporting periods, edge-case checks on negative actuals and zero-tonne sites, and a walkthrough with the operations lead before publishing.</p>
+            </section>
+            <section>
+              <h2>Outcomes</h2>
+              <p>Site managers can now review their own performance and benchmark against peer sites in one place. The weekly variance review is shorter and the conversation moves faster from 'what happened' to 'why' and 'what we will do about it'.</p>
+            </section>
+          </article>
+          <aside class="case-sidebar">
+            <div class="card">
+              <h3>At a glance</h3>
+              <ul class="clean">
+                <li><strong>Sector:</strong> Food Manufacturing</li>
+                <li><strong>Discipline:</strong> Tableau Dashboard</li>
+                <li><strong>Role:</strong> Data Analyst</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Tools used</h3>
+              <div class="tags"><span class="tag">Tableau</span><span class="tag">Alteryx</span><span class="tag">Calculated fields</span><span class="tag">KPI design</span><span class="tag">Variance analysis</span></div>
+            </div>
+            <div class="card soft">
+              <h3>Confidentiality</h3>
+              <p style="font-size:0.88rem;">Dashboard image is an anonymised mock-up. Client identifiers, real values and proprietary visuals are not shown.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Nikhara Inderlal</strong>
+        <p>Data Analyst &amp; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
+      </div>
+      <div>
+        <p><a href="../projects.html">View projects</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
+        <p>Portfolio rebuilt for GitHub Pages. Dashboard visuals are anonymised mock-ups created for demonstration.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

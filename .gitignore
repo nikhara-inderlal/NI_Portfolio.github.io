@@ -1,0 +1,9 @@
+# Local preview screenshots from Playwright audit runs
+.audit/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

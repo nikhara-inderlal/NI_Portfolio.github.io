@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Store Reporting Pack · Monthly Review — anonymised mock dashboard">
+  <rect width="1600" height="900" fill="#fbf2f3"/>
+
+  <!-- header bar -->
+  <rect x="40" y="36" width="1520" height="56" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <circle cx="74" cy="64" r="14" fill="#c75666"/>
+  <text x="98" y="69" font-family="-apple-system, Segoe UI, sans-serif" font-size="17" font-weight="600" fill="#1a2233">Store Reporting Pack · Monthly Review</text>
+  <g font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479">
+    <rect x="1180" y="49" width="80" height="30" rx="15" fill="#f6dce0" stroke="#c75666" stroke-opacity="0.3"/>
+    <text x="1220" y="68" text-anchor="middle">Last 90d</text>
+    <rect x="1268" y="49" width="80" height="30" rx="15" fill="#f3f5f8" stroke="#dfe3ec"/>
+    <text x="1308" y="68" text-anchor="middle">By Region</text>
+    <rect x="1356" y="49" width="80" height="30" rx="15" fill="#f3f5f8" stroke="#dfe3ec"/>
+    <text x="1396" y="68" text-anchor="middle">By Segment</text>
+    <rect x="1444" y="49" width="80" height="30" rx="15" fill="#c75666"/>
+    <text x="1484" y="68" text-anchor="middle" fill="#ffffff" font-weight="600">Refresh</text>
+  </g>
+
+  <!-- KPI row at y=120 -->
+  <rect x="40" y="120" width="367" height="100" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <text x="62" y="150" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8892a6" letter-spacing="1.2">STORES REPORTING</text>
+  <text x="62" y="186" font-family="-apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1a2233">38 / 38</text>
+  <text x="62" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#1d6e3c">▲ +2</text>
+  <rect x="297" y="180" width="5" height="24" rx="1" fill="#c75666" fill-opacity="0.25"/>
+  <rect x="305" y="191" width="5" height="13" rx="1" fill="#c75666" fill-opacity="0.30"/>
+  <rect x="313" y="163" width="5" height="41" rx="1" fill="#c75666" fill-opacity="0.34"/>
+  <rect x="321" y="176" width="5" height="28" rx="1" fill="#c75666" fill-opacity="0.39"/>
+  <rect x="329" y="181" width="5" height="23" rx="1" fill="#c75666" fill-opacity="0.43"/>
+  <rect x="337" y="188" width="5" height="16" rx="1" fill="#c75666" fill-opacity="0.48"/>
+  <rect x="345" y="183" width="5" height="21" rx="1" fill="#c75666" fill-opacity="0.53"/>
+  <rect x="353" y="185" width="5" height="19" rx="1" fill="#c75666" fill-opacity="0.57"/>
+  <rect x="361" y="169" width="5" height="35" rx="1" fill="#c75666" fill-opacity="0.62"/>
+  <rect x="369" y="180" width="5" height="24" rx="1" fill="#c75666" fill-opacity="0.66"/>
+  <rect x="377" y="156" width="5" height="48" rx="1" fill="#c75666" fill-opacity="0.71"/>
+  <rect x="385" y="169" width="5" height="35" rx="1" fill="#c75666" fill-opacity="0.75"/>
+  <rect x="421" y="120" width="367" height="100" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <text x="443" y="150" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8892a6" letter-spacing="1.2">BASKET</text>
+  <text x="443" y="186" font-family="-apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1a2233">$24.30</text>
+  <text x="443" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#1d6e3c">▲ 1.1%</text>
+  <rect x="678" y="161" width="5" height="43" rx="1" fill="#c75666" fill-opacity="0.25"/>
+  <rect x="686" y="164" width="5" height="40" rx="1" fill="#c75666" fill-opacity="0.30"/>
+  <rect x="694" y="161" width="5" height="43" rx="1" fill="#c75666" fill-opacity="0.34"/>
+  <rect x="702" y="193" width="5" height="11" rx="1" fill="#c75666" fill-opacity="0.39"/>
+  <rect x="710" y="164" width="5" height="40" rx="1" fill="#c75666" fill-opacity="0.43"/>
+  <rect x="718" y="156" width="5" height="48" rx="1" fill="#c75666" fill-opacity="0.48"/>
+  <rect x="726" y="174" width="5" height="30" rx="1" fill="#c75666" fill-opacity="0.53"/>
+  <rect x="734" y="159" width="5" height="45" rx="1" fill="#c75666" fill-opacity="0.57"/>
+  <rect x="742" y="166" width="5" height="38" rx="1" fill="#c75666" fill-opacity="0.62"/>
+  <rect x="750" y="174" width="5" height="30" rx="1" fill="#c75666" fill-opacity="0.66"/>
+  <rect x="758" y="158" width="5" height="46" rx="1" fill="#c75666" fill-opacity="0.71"/>
+  <rect x="766" y="164" width="5" height="40" rx="1" fill="#c75666" fill-opacity="0.75"/>
+  <rect x="802" y="120" width="367" height="100" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <text x="824" y="150" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8892a6" letter-spacing="1.2">YoY · GROSS</text>
+  <text x="824" y="186" font-family="-apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1a2233">+6.2%</text>
+  <text x="824" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#1d6e3c">▲</text>
+  <rect x="1059" y="160" width="5" height="44" rx="1" fill="#c75666" fill-opacity="0.25"/>
+  <rect x="1067" y="188" width="5" height="16" rx="1" fill="#c75666" fill-opacity="0.30"/>
+  <rect x="1075" y="155" width="5" height="49" rx="1" fill="#c75666" fill-opacity="0.34"/>
+  <rect x="1083" y="184" width="5" height="20" rx="1" fill="#c75666" fill-opacity="0.39"/>
+  <rect x="1091" y="176" width="5" height="28" rx="1" fill="#c75666" fill-opacity="0.43"/>
+  <rect x="1099" y="183" width="5" height="21" rx="1" fill="#c75666" fill-opacity="0.48"/>
+  <rect x="1107" y="186" width="5" height="18" rx="1" fill="#c75666" fill-opacity="0.53"/>
+  <rect x="1115" y="170" width="5" height="34" rx="1" fill="#c75666" fill-opacity="0.57"/>
+  <rect x="1123" y="178" width="5" height="26" rx="1" fill="#c75666" fill-opacity="0.62"/>
+  <rect x="1131" y="190" width="5" height="14" rx="1" fill="#c75666" fill-opacity="0.66"/>
+  <rect x="1139" y="181" width="5" height="23" rx="1" fill="#c75666" fill-opacity="0.71"/>
+  <rect x="1147" y="154" width="5" height="50" rx="1" fill="#c75666" fill-opacity="0.75"/>
+  <rect x="1183" y="120" width="367" height="100" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <text x="1205" y="150" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8892a6" letter-spacing="1.2">TOPPINGS · TOP</text>
+  <text x="1205" y="186" font-family="-apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1a2233">Cheese</text>
+  <text x="1205" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5b6479">—</text>
+  <rect x="1440" y="189" width="5" height="15" rx="1" fill="#c75666" fill-opacity="0.25"/>
+  <rect x="1448" y="191" width="5" height="13" rx="1" fill="#c75666" fill-opacity="0.30"/>
+  <rect x="1456" y="184" width="5" height="20" rx="1" fill="#c75666" fill-opacity="0.34"/>
+  <rect x="1464" y="187" width="5" height="17" rx="1" fill="#c75666" fill-opacity="0.39"/>
+  <rect x="1472" y="171" width="5" height="33" rx="1" fill="#c75666" fill-opacity="0.43"/>
+  <rect x="1480" y="177" width="5" height="27" rx="1" fill="#c75666" fill-opacity="0.48"/>
+  <rect x="1488" y="176" width="5" height="28" rx="1" fill="#c75666" fill-opacity="0.53"/>
+  <rect x="1496" y="192" width="5" height="12" rx="1" fill="#c75666" fill-opacity="0.57"/>
+  <rect x="1504" y="194" width="5" height="10" rx="1" fill="#c75666" fill-opacity="0.62"/>
+  <rect x="1512" y="170" width="5" height="34" rx="1" fill="#c75666" fill-opacity="0.66"/>
+  <rect x="1520" y="186" width="5" height="18" rx="1" fill="#c75666" fill-opacity="0.71"/>
+  <rect x="1528" y="177" width="5" height="27" rx="1" fill="#c75666" fill-opacity="0.75"/>
+  <rect x="40" y="250" width="970" height="380" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <text x="62" y="278" font-family="-apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#1a2233">Store performance · heatmap · 38 sites</text>
+  <rect x="70.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="161.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#fbf2f3"/>
+  <rect x="252.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#d97683"/>
+  <rect x="343.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#d97683"/>
+  <rect x="434.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="525.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="616.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#e89aa3"/>
+  <rect x="707.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="798.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#fbf2f3"/>
+  <rect x="889.0" y="306.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="70.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="161.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="252.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#c75666"/>
+  <rect x="343.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#fbf2f3"/>
+  <rect x="434.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#fbf2f3"/>
+  <rect x="525.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#e89aa3"/>
+  <rect x="616.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="707.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#fbf2f3"/>
+  <rect x="798.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#e89aa3"/>
+  <rect x="889.0" y="381.0" width="87.0" height="71.0" rx="3" fill="#e89aa3"/>
+  <rect x="70.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#e89aa3"/>
+  <rect x="161.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#d97683"/>
+  <rect x="252.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="343.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="434.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="525.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="616.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="707.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="798.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#c75666"/>
+  <rect x="889.0" y="456.0" width="87.0" height="71.0" rx="3" fill="#d97683"/>
+  <rect x="70.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="161.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#8a2f3b"/>
+  <rect x="252.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="343.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#a84551"/>
+  <rect x="434.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#8a2f3b"/>
+  <rect x="525.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#d97683"/>
+  <rect x="616.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#8a2f3b"/>
+  <rect x="707.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#e89aa3"/>
+  <rect x="798.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#d97683"/>
+  <rect x="889.0" y="531.0" width="87.0" height="71.0" rx="3" fill="#f6dce0"/>
+  <rect x="1030" y="250" width="530" height="380" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
+  <text x="1052" y="278" font-family="-apple-system, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#1a2233">Top categories · trend</text>
+  <text x="1052" y="318" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#1a2233" font-weight="500">Toppings A</text>
+  <polyline points="1160.0,314.0 1176.3,309.0 1192.6,308.0 1208.9,310.0 1225.3,313.0 1241.6,319.0 1257.9,320.0 1274.2,320.0 1290.5,318.0 1306.8,314.0 1323.2,309.0 1339.5,308.0 1355.8,309.0 1372.1,313.0 1388.4,319.0 1404.7,320.0 1421.1,321.0 1437.4,317.0 1453.7,312.0 1470.0,310.0" fill="none" stroke="#c75666" stroke-width="1.8"/>
+  <text x="1538" y="318" text-anchor="end" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479" font-weight="600">99%</text>
+  <text x="1052" y="346" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#1a2233" font-weight="500">Toppings B</text>
+  <polyline points="1160.0,341.0 1176.3,337.0 1192.6,336.0 1208.9,338.0 1225.3,342.0 1241.6,346.0 1257.9,348.0 1274.2,348.0 1290.5,345.0 1306.8,340.0 1323.2,337.0 1339.5,336.0 1355.8,338.0 1372.1,343.0 1388.4,346.0 1404.7,348.0 1421.1,349.0 1437.4,346.0 1453.7,340.0 1470.0,338.0" fill="none" stroke="#c75666" stroke-width="1.8"/>
+  <text x="1538" y="346" text-anchor="end" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479" font-weight="600">55%</text>
+  <text x="1052" y="374" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#1a2233" font-weight="500">Bases</text>
+  <polyline points="1160.0,370.0 1176.3,366.0 1192.6,364.0 1208.9,365.0 1225.3,369.0 1241.6,374.0 1257.9,376.0 1274.2,377.0 1290.5,375.0 1306.8,368.0 1323.2,366.0 1339.5,364.0 1355.8,365.0 1372.1,371.0 1388.4,374.0 1404.7,376.0 1421.1,377.0 1437.4,374.0 1453.7,369.0 1470.0,365.0" fill="none" stroke="#c75666" stroke-width="1.8"/>
+  <text x="1538" y="374" text-anchor="end" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479" font-weight="600">99%</text>
+  <text x="1052" y="402" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#1a2233" font-weight="500">Sides</text>
+  <polyline points="1160.0,398.0 1176.3,394.0 1192.6,392.0 1208.9,393.0 1225.3,398.0 1241.6,401.0 1257.9,404.0 1274.2,405.0 1290.5,403.0 1306.8,396.0 1323.2,393.0 1339.5,392.0 1355.8,393.0 1372.1,397.0 1388.4,403.0 1404.7,404.0 1421.1,404.0 1437.4,401.0 1453.7,398.0 1470.0,393.0" fill="none" stroke="#c75666" stroke-width="1.8"/>
+  <text x="1538" y="402" text-anchor="end" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479" font-weight="600">74%</text>
+  <text x="1052" y="430" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#1a2233" font-weight="500">Drinks</text>
+  <polyline points="1160.0,426.0 1176.3,421.0 1192.6,420.0 1208.9,421.0 1225.3,427.0 1241.6,430.0 1257.9,432.0 1274.2,433.0 1290.5,431.0 1306.8,426.0 1323.2,421.0 1339.5,420.0 1355.8,421.0 1372.1,427.0 1388.4,431.0 1404.7,433.0 1421.1,433.0 1437.4,431.0 1453.7,426.0 1470.0,422.0" fill="none" stroke="#c75666" stroke-width="1.8"/>
+  <text x="1538" y="430" text-anchor="end" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479" font-weight="600">89%</text>
+  <text x="1052" y="458" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#1a2233" font-weight="500">Desserts</text>
+  <polyline points="1160.0,452.0 1176.3,450.0 1192.6,448.0 1208.9,450.0 1225.3,455.0 1241.6,460.0 1257.9,461.0 1274.2,460.0 1290.5,458.0 1306.8,454.0 1323.2,450.0 1339.5,448.0 1355.8,450.0 1372.1,454.0 1388.4,460.0 1404.7,461.0 1421.1,460.0 1437.4,457.0 1453.7,454.0 1470.0,449.0" fill="none" stroke="#c75666" stroke-width="1.8"/>
+  <text x="1538" y="458" text-anchor="end" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#5b6479" font-weight="600">83%</text>
+
+  <!-- mock watermark -->
+  <g transform="translate(40, 870) rotate(0)" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" fill="#8892a6">
+    <text>Mock-up · anonymised sample data · structure only</text>
+  </g>
+
+</svg>

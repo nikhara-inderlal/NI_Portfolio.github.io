@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Built a web analytics extraction and transformation workflow using Alteryx and the Google Analytics API, creating dimensional and flattened reporting layers for website and marketing performance analysis.">
+  <title>Web Analytics API Pipeline | Nikhara Inderlal</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="../index.html" class="brand" aria-label="Nikhara Inderlal home">
+        <span class="brand-mark">NI</span>
+        <span>Nikhara Inderlal<br><span>Data Analyst &amp; BI Consultant</span></span>
+      </a>
+      <button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="site-nav" data-nav-links>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../journey.html">Journey</a></li>
+          <li><a href="../writing.html">Writing</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <a class="case-back" href="../projects.html">Back to projects</a>
+        <span class="eyebrow">API / ETL</span>
+        <h1>Web Analytics API Pipeline</h1>
+        <p class="lead">Alteryx + Google Analytics API workflow producing dimensional and flattened reporting layers.</p>
+        <div class="case-meta">
+          <div><strong>Sector</strong><span>Digital / Web Analytics</span></div>
+          <div><strong>Role</strong><span>Analytics Engineer</span></div>
+          <div><strong>Engagement</strong><span>Project engagement</span></div>
+          <div><strong>Tools</strong><span>Alteryx, Alteryx Server, Google Analytics API, SQL Server</span></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <figure class="case-figure">
+          <img src="../assets/img/projects/web-analytics.svg" alt="Anonymised mock dashboard for Web Analytics API Pipeline">
+          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
+        </figure>
+        <div class="case-body">
+          <article>
+            <section>
+              <h2>Context</h2>
+              <p>Marketing wanted self-serve reporting on website behaviour, channel performance and campaign conversion without continually exporting from the Google Analytics UI. The data needed to land in SQL Server in a shape downstream BI tools could use.</p>
+            </section>
+            <section>
+              <h2>Approach</h2>
+              <p>Built an Alteryx workflow that called the Google Analytics API on a schedule, handled paging and quota limits, and landed both a dimensional layer (for star-schema downstream use) and a flattened reporting layer (for ad-hoc analysis). Scheduled via Alteryx Server.</p>
+            </section>
+            <section>
+              <h2>Modelling &amp; preparation</h2>
+              <p>Dimensional layer: dim_date, dim_channel, dim_campaign, dim_page, fact_session, fact_event. Flattened layer: one denormalised wide table for analysts who don't want to write joins. Both layers refresh from the same source workflow so they stay consistent.</p>
+            </section>
+            <section>
+              <h2>Validation</h2>
+              <p>Cross-checked Alteryx outputs against the GA UI for matched date ranges, monitored row counts and API quota usage over the first month, and added explicit run-status logging so failures surface to the analytics team instead of going silent.</p>
+            </section>
+            <section>
+              <h2>Outcomes</h2>
+              <p>Marketing now has reliable channel and campaign analysis without manual exports. Downstream dashboards refresh on a schedule, and the dual-layer design means both star-schema users and ad-hoc analysts get what they need from the same source.</p>
+            </section>
+          </article>
+          <aside class="case-sidebar">
+            <div class="card">
+              <h3>At a glance</h3>
+              <ul class="clean">
+                <li><strong>Sector:</strong> Digital / Web Analytics</li>
+                <li><strong>Discipline:</strong> API / ETL</li>
+                <li><strong>Role:</strong> Analytics Engineer</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Tools used</h3>
+              <div class="tags"><span class="tag">Alteryx</span><span class="tag">Alteryx Server</span><span class="tag">Google Analytics API</span><span class="tag">SQL Server</span><span class="tag">Dimensional modelling</span></div>
+            </div>
+            <div class="card soft">
+              <h3>Confidentiality</h3>
+              <p style="font-size:0.88rem;">Dashboard image is an anonymised mock-up. Client identifiers, real values and proprietary visuals are not shown.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Nikhara Inderlal</strong>
+        <p>Data Analyst &amp; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
+      </div>
+      <div>
+        <p><a href="../projects.html">View projects</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
+        <p>Portfolio rebuilt for GitHub Pages. Dashboard visuals are anonymised mock-ups created for demonstration.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
