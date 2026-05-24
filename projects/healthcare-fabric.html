@@ -58,20 +58,32 @@
               <p>The client operated multiple legacy reporting layers with inconsistent metric definitions, no shared dimension model, and a long manual refresh process. Stakeholders across clinical, operational and finance functions could not reconcile the same KPIs across reports.</p>
             </section>
             <section>
+              <h2>Business problem</h2>
+              <p>Different teams produced different numbers for the same metric, and there was no agreed source of truth. Discussions in operational meetings stalled while leaders debated whose figure was correct, instead of acting on what the figure meant.</p>
+            </section>
+            <section>
               <h2>Approach</h2>
               <p>The team adopted a Microsoft Fabric Lakehouse + Direct Lake approach. My contribution focused on the semantic layer: preparing and validating fact and dimension tables, supporting reusable DAX measures, and helping define metric ownership so the same number meant the same thing across all reports.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Star-schema model with conformed dimensions for time, site, service line and patient cohort. Fact tables for admissions, episodes, and cost ledger lines. Reusable DAX measures with explicit definitions in the data dictionary. Direct Lake mode chosen for the largest fact tables to keep refresh windows short.</p>
+              <p>Star-schema model with conformed dimensions for time, site, service line and patient cohort. Fact tables for admissions, episodes and cost ledger lines. Reusable DAX measures with explicit definitions in the data dictionary. Direct Lake mode chosen for the largest fact tables to keep refresh windows short.</p>
             </section>
             <section>
               <h2>Validation</h2>
               <p>Numeric reconciliation against the prior reporting layer for a 12-month overlap window, row-count diffs after every transformation step, and stakeholder sign-off per business area before any report was promoted to the published workspace.</p>
             </section>
             <section>
+              <h2>Stakeholder delivery &amp; handover</h2>
+              <p>Walkthroughs with each business area covering the metric definitions, the underlying model and how to read the published reports. Handover included a documented data dictionary, refresh schedule and the validation evidence so the client team could maintain the layer themselves.</p>
+            </section>
+            <section>
               <h2>Outcomes</h2>
               <p>Stakeholders across business areas now consume the same conformed metrics. Reduced argument over definitions, faster onboarding of new reports against the shared semantic model, and a clearer audit path from source through to published number.</p>
+            </section>
+            <section>
+              <h2>Reflection</h2>
+              <p>The biggest lesson was that the modelling and measure-definition work was more valuable than any individual visual. Time spent agreeing what a metric meant — and writing that definition down — paid back every time someone built a new report on the same model.</p>
             </section>
           </article>
           <aside class="case-sidebar">

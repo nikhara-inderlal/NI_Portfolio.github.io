@@ -58,6 +58,10 @@
               <p>A franchise group needed a monthly store reporting pack covering 38 stores. Each store submitted sales data in its own Excel file with inconsistent column names, sheet structures and date formats. The team wanted a single printable pack per store.</p>
             </section>
             <section>
+              <h2>Business problem</h2>
+              <p>Each store's Excel file was structured differently, so producing a standard monthly pack required manual rework each month. The franchise team could not benchmark stores against each other on a consistent basis.</p>
+            </section>
+            <section>
               <h2>Approach</h2>
               <p>Used Excel VBA + Tableau Prep to normalise the 38 source files into one clean dataset, then built printable Tableau dashboards parameterised by store so the same template generated one pack per store every month. LOD calculations kept franchise-wide benchmarks correct even when filtered to one store.</p>
             </section>
@@ -70,8 +74,16 @@
               <p>Spot-checked five randomly chosen stores against their own raw Excel totals, confirmed YoY calculations against the prior-year archive, and asked the franchise operations lead to review three packs before bulk generation.</p>
             </section>
             <section>
+              <h2>Stakeholder delivery &amp; handover</h2>
+              <p>Operations team trained on the month-end refresh: drop the 38 source files into a known folder, run the prep flow, the parameterised pack regenerates per store. Handover included a written runbook so the process didn't depend on any one person.</p>
+            </section>
+            <section>
               <h2>Outcomes</h2>
               <p>Each store now receives a consistent, printable monthly pack with the same KPIs, the same product and topping analysis, and the same YoY context. The franchise operations team can compare stores using the same yardstick.</p>
+            </section>
+            <section>
+              <h2>Reflection</h2>
+              <p>The prep flow was the real deliverable. Once 38 messy source files reliably became one clean dataset, the dashboard itself was the easy part — and the runbook meant the franchise team could keep using it after handover.</p>
             </section>
           </article>
           <aside class="case-sidebar">

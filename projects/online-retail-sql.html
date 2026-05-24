@@ -58,20 +58,32 @@
               <p>An online retail platform had recurring data-integrity issues: orders changing state in unexpected ways, fulfilment events arriving out of order, and silent inconsistencies between the order header and line totals. Operations needed visibility into these without rebuilding the source system.</p>
             </section>
             <section>
+              <h2>Business problem</h2>
+              <p>Issues were being reported piecemeal by support and finance, with no central record. The same kind of inconsistency surfaced repeatedly, and no one could quantify whether it was getting better or worse.</p>
+            </section>
+            <section>
               <h2>Approach</h2>
               <p>Wrote a SQL-based exception layer that watched the relevant tables and surfaced any business-rule violation as an explicit, named exception. Used triggers to capture every state transition into an append-only audit log, then layered a small set of reports on top of that log.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Audit table per source entity with the original row image, the changed row image, the rule that fired, a severity label, and a timestamp. A summary view per rule made trend analysis straightforward without re-running heavy joins.</p>
+              <p>Audit table per source entity with the original row image, the changed row image, the rule that fired, a severity label and a timestamp. A summary view per rule made trend analysis straightforward without re-running heavy joins.</p>
             </section>
             <section>
               <h2>Validation</h2>
               <p>Reproduced known historical incidents from the past 90 days using replay scripts and confirmed each one now appeared in the audit layer with the correct rule firing. Reviewed false-positive rate with the operations team before enabling notifications.</p>
             </section>
             <section>
+              <h2>Stakeholder delivery &amp; handover</h2>
+              <p>Operations onboarded by sitting through a daily-summary review for the first week. Documentation handed over included the rule list, severity definitions, the audit table schema and the alert-routing rules so the team could tune thresholds themselves.</p>
+            </section>
+            <section>
               <h2>Outcomes</h2>
               <p>Operations now receives a single daily summary of exceptions instead of investigating one-off reports of 'something looks wrong'. The audit log gives an evidence trail when defending refunds or stock adjustments.</p>
+            </section>
+            <section>
+              <h2>Reflection</h2>
+              <p>Naming each rule and giving it a severity made the difference. The same logic without those labels would have produced noise; with them it produced an actionable, prioritised feed the operations team could trust.</p>
             </section>
           </article>
           <aside class="case-sidebar">
