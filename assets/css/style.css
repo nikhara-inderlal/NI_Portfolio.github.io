@@ -381,6 +381,29 @@ main section:first-child { padding-top: 2.5rem; }
   letter-spacing: 0.05em;
 }
 
+.headshot {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-soft);
+  background: var(--surface-soft);
+  box-shadow: var(--shadow-sm);
+}
+.headshot.lg { width: 140px; height: 140px; border-width: 4px; }
+.headshot.sm { width: 72px; height: 72px; border-width: 2px; }
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .about-hero-grid { grid-template-columns: 1fr; justify-items: start; gap: 1.25rem; }
+}
+
 .metric-strip {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
