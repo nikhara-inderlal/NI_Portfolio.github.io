@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nikhara-inderlal.github.io/NI_Portfolio.github.io/sitemap.xml

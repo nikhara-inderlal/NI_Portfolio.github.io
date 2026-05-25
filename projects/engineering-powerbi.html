@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Created a Power BI dashboard to help stakeholders analyse business opportunities, tender performance and historical win-rate patterns using transformed opportunity data and DAX-driven executive metrics.">
+  <meta name="description" content="A Power BI case showing commercial reporting, executive metrics and stakeholder-facing dashboard design.">
+  <link rel="canonical" href="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/engineering-powerbi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Engineering Services Opportunity Tracking Dashboard | Nikhara Inderlal">
+  <meta property="og:description" content="A Power BI case showing commercial reporting, executive metrics and stakeholder-facing dashboard design.">
+  <meta property="og:url" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/engineering-powerbi.html">
+  <meta property="og:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineering Services Opportunity Tracking Dashboard | Nikhara Inderlal">
+  <meta name="twitter:description" content="A Power BI case showing commercial reporting, executive metrics and stakeholder-facing dashboard design.">
+  <meta name="twitter:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
   <title>Engineering Services Opportunity Tracking Dashboard | Nikhara Inderlal</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Engineering Services Opportunity Tracking Dashboard","author":{"@type":"Person","name":"Nikhara Inderlal"},"url":"https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/engineering-powerbi.html","about":["Power BI","Power Query","DAX","Data modelling"]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,110 +25,34 @@
     <div class="container navbar">
       <a href="../index.html" class="brand" aria-label="Nikhara Inderlal home">
         <span class="brand-mark">NI</span>
-        <span>Nikhara Inderlal<br><span>Data Analytics Engineer &#124; BI Consultant</span></span>
+        <span>Nikhara Inderlal<br><span>Sydney Analytics Engineer | BI Consultant</span></span>
       </a>
       <button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav aria-label="Main navigation">
         <ul class="nav-links" id="site-nav" data-nav-links>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../skills.html">Skills</a></li>
-          <li><a href="../journey.html">Journey</a></li>
-          <li><a href="../writing.html">Writing</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+<li><a class="active" aria-current="page" href="../projects.html">Work</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main">
-    <section class="case-hero">
-      <div class="container">
-        <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Power BI Dashboard</span>
-        <h1>Engineering Services Opportunity Tracking Dashboard</h1>
-        <p class="lead">Executive dashboard for business opportunities, tender performance and historical win-rate analysis.</p>
-        <div class="case-meta">
-          <div><strong>Sector</strong><span>Engineering Services</span></div>
-          <div><strong>Role</strong><span>Data Analyst</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Power BI, Power Query, DAX, Data modelling</span></div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <figure class="case-figure">
-          <img src="../assets/img/projects/engineering-powerbi.svg" alt="Anonymised mock dashboard for Engineering Services Opportunity Tracking Dashboard">
-          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
-        </figure>
-        <div class="case-body">
-          <article>
-            <section>
-              <h2>Context</h2>
-              <p>Sales leadership had detailed opportunity records in their CRM but no single view of pipeline health, win-rate trend, or how performance differed by sector and opportunity size. Decisions about resource allocation were anecdotal.</p>
-            </section>
-            <section>
-              <h2>Business problem</h2>
-              <p>Leadership couldn't see win-rate trends or sector-level performance without commissioning a custom analysis each time. Pursuit decisions relied on memory and gut rather than evidence.</p>
-            </section>
-            <section>
-              <h2>Approach</h2>
-              <p>Modelled opportunity data into clean fact and dimension tables in Power BI, with date intelligence on opportunity creation and close dates, and built a single executive page plus drilldown pages for sector, stage and value-band analysis.</p>
-            </section>
-            <section>
-              <h2>Modelling &amp; preparation</h2>
-              <p>Star schema with dim_date, dim_sector, dim_stage, fact_opportunity. DAX measures for win rate (closed-won / closed-total), pipeline value, conversion ratios by stage, and rolling 12-month win-rate trend with sector breakdown.</p>
-            </section>
-            <section>
-              <h2>Validation</h2>
-              <p>Reconciled total opportunity counts and values against the CRM's own native reports. Reviewed win-rate definitions with sales leadership to make sure 'closed-lost-no-decision' was being treated consistently across the analysis.</p>
-            </section>
-            <section>
-              <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Walked sales leadership through the executive page and the drilldown structure. Documented the win-rate definition, the data refresh cadence and the CRM-stage mapping so the analysis remained defensible after handover.</p>
-            </section>
-            <section>
-              <h2>Outcomes</h2>
-              <p>Leadership reviews pipeline weekly using one dashboard. Conversations about pursuit decisions now reference the same numbers and the same definitions, and the team can spot win-rate shifts by sector before they show up in revenue.</p>
-            </section>
-            <section>
-              <h2>Reflection</h2>
-              <p>Agreeing the win-rate definition up front saved rework later. It was a small conversation that prevented every future pipeline review from re-litigating the same question.</p>
-            </section>
-          </article>
-          <aside class="case-sidebar">
-            <div class="card">
-              <h3>At a glance</h3>
-              <ul class="clean">
-                <li><strong>Sector:</strong> Engineering Services</li>
-                <li><strong>Discipline:</strong> Power BI Dashboard</li>
-                <li><strong>Role:</strong> Data Analyst</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Tools used</h3>
-              <div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Data modelling</span><span class="tag">Executive reporting</span></div>
-            </div>
-            <div class="card soft">
-              <h3>Confidentiality</h3>
-              <p style="font-size:0.88rem;">Dashboard image is an anonymised mock-up. Client identifiers, real values and proprietary visuals are not shown.</p>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+
+    <section class="case-hero compact-hero"><div class="container"><a class="case-back" href="../projects.html">Back to work</a><span class="eyebrow">Engineering services</span><h1>Engineering Services Opportunity Tracking Dashboard</h1><p class="lead">A Power BI case showing commercial reporting, executive metrics and stakeholder-facing dashboard design.</p><div class="case-meta"><div><strong>Sector</strong><span>Engineering services</span></div><div><strong>My role</strong><span>Power BI Developer</span></div><div><strong>Period</strong><span>Client-style analytics project</span></div><div><strong>Stack</strong><span>Power BI, Power Query, DAX, Data modelling</span></div></div><div class="impact-strip"><div><strong>Executive reporting</strong></div><div><strong>DAX measures</strong></div><div><strong>Opportunity pipeline analysis</strong></div><div><strong>Benchmark logic</strong></div></div></div></section>
+    <section><div class="container"><figure class="case-figure"><img src="../assets/img/projects/engineering-powerbi.svg" alt="Anonymised mock dashboard for Engineering Services Opportunity Tracking Dashboard" width="1600" height="900" loading="lazy" decoding="async"><figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client or proprietary data.</figcaption></figure><div class="case-body"><article><section class="summary-panel"><h2>Recruiter scan</h2><dl class="scan-list"><div><dt>Problem</dt><dd>Stakeholders needed to understand opportunity pipeline, tender performance and win-rate patterns without manual spreadsheet review.</dd></div><div><dt>Build</dt><dd>Created a Power BI dashboard with transformed opportunity data, DAX measures, historical win-rate analysis and benchmark-based estimation logic.</dd></div><div><dt>Result</dt><dd>Gave executives a clearer view of pipeline performance, estimated opportunity value and the patterns behind tender outcomes.</dd></div></dl></section><section><h2>Business problem</h2><p>Opportunity and tender information needed to be turned into useful executive reporting rather than a static operational record.</p></section><section><h2>My role and ownership</h2><p>Prepared the opportunity data, modelled reporting logic and designed dashboard views around pipeline, win-rate and opportunity-value questions.</p></section><section><h2>What I built</h2><p>Built transformations in Power Query and DAX metrics for historical win-rate patterns, benchmarking and executive summary views.</p></section><section><h2>Validation and reliability</h2><p>Checked outputs against source categories and stakeholder expectations so the dashboard reflected business definitions rather than only technical fields.</p></section><section><h2>Outcome</h2><p>The dashboard made commercial opportunity patterns faster to review and easier to discuss with stakeholders.</p></section></article><aside class="case-sidebar"><div class="card"><h3>At a glance</h3><ul class="clean"><li><strong>Sector:</strong> Engineering services</li><li><strong>Role:</strong> Power BI Developer</li><li><strong>Period:</strong> Client-style analytics project</li></ul></div><div class="card"><h3>Tools used</h3><div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Data modelling</span></div></div><div class="card soft"><h3>Why it matters</h3><p>Gave executives a clearer view of pipeline performance, estimated opportunity value and the patterns behind tender outcomes.</p></div></aside></div></div></section>
+
   </main>
   <footer class="footer">
     <div class="container footer-grid">
       <div>
         <strong>Nikhara Inderlal</strong>
-        <p>Data Analytics Engineer &#124; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
+        <p>Sydney-based Analytics Engineer and BI Consultant building trusted semantic models, reporting layers and stakeholder-ready dashboards.</p>
       </div>
       <div>
-        <p><a href="../projects.html">View projects</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
-        <p>Portfolio rebuilt for GitHub Pages. Dashboard visuals are anonymised mock-ups created for demonstration.</p>
+        <p><a href="../projects.html">Work</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
+        <p><a href="../about.html">About</a> · <a href="../skills.html">Skills</a> · <a href="../writing.html">Writing</a> · <a href="../journey.html">Journey</a></p>
       </div>
     </div>
   </footer>

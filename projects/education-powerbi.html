@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Created a Power BI reporting solution to help a private school track student progress using a fairer effort score based on each student's historical baseline, with walkthroughs for teachers and the principal.">
-  <title>Education Analytics: Student Progress & Effort Reporting | Nikhara Inderlal</title>
+  <meta name="description" content="An education analytics case focused on fair metric design, progress interpretation and Power BI communication.">
+  <link rel="canonical" href="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/education-powerbi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Education Analytics: Student Progress &amp; Effort Reporting | Nikhara Inderlal">
+  <meta property="og:description" content="An education analytics case focused on fair metric design, progress interpretation and Power BI communication.">
+  <meta property="og:url" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/education-powerbi.html">
+  <meta property="og:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Education Analytics: Student Progress &amp; Effort Reporting | Nikhara Inderlal">
+  <meta name="twitter:description" content="An education analytics case focused on fair metric design, progress interpretation and Power BI communication.">
+  <meta name="twitter:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
+  <title>Education Analytics: Student Progress &amp; Effort Reporting | Nikhara Inderlal</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Education Analytics: Student Progress & Effort Reporting","author":{"@type":"Person","name":"Nikhara Inderlal"},"url":"https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/education-powerbi.html","about":["Power BI","DAX","Education analytics","Trend reporting"]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,110 +25,34 @@
     <div class="container navbar">
       <a href="../index.html" class="brand" aria-label="Nikhara Inderlal home">
         <span class="brand-mark">NI</span>
-        <span>Nikhara Inderlal<br><span>Data Analytics Engineer &#124; BI Consultant</span></span>
+        <span>Nikhara Inderlal<br><span>Sydney Analytics Engineer | BI Consultant</span></span>
       </a>
       <button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav aria-label="Main navigation">
         <ul class="nav-links" id="site-nav" data-nav-links>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../skills.html">Skills</a></li>
-          <li><a href="../journey.html">Journey</a></li>
-          <li><a href="../writing.html">Writing</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+<li><a class="active" aria-current="page" href="../projects.html">Work</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main">
-    <section class="case-hero">
-      <div class="container">
-        <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Power BI / Analytics Design</span>
-        <h1>Education Analytics: Student Progress & Effort Reporting</h1>
-        <p class="lead">Power BI reporting for a private school using a baseline-aware effort score, with walkthroughs for teachers and the principal.</p>
-        <div class="case-meta">
-          <div><strong>Sector</strong><span>Education</span></div>
-          <div><strong>Role</strong><span>Data Analyst</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Power BI, Power Query, DAX, Semantic model</span></div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <figure class="case-figure">
-          <img src="../assets/img/projects/education-powerbi.svg" alt="Anonymised mock dashboard for Education Analytics: Student Progress & Effort Reporting">
-          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
-        </figure>
-        <div class="case-body">
-          <article>
-            <section>
-              <h2>Context</h2>
-              <p>A private school wanted to track student progress and effort over time. The existing simple averaging approach unfairly penalised students who had always performed at the top of the range, and unfairly rewarded students whose baseline was low. The principal wanted a fairer metric.</p>
-            </section>
-            <section>
-              <h2>Business problem</h2>
-              <p>A single average mark hides effort. Students consistently performing at the top of the range looked the same year-on-year even when they were extending themselves, and students with lower baselines could appear weak even when their own trajectory was strong.</p>
-            </section>
-            <section>
-              <h2>Approach</h2>
-              <p>Designed a baseline-aware effort score in DAX that compared each student's current term to their own historical performance, not to a year-group mean. Built a Power BI reporting page per year group plus a per-student deep-dive, and walked teachers and the principal through it for sign-off.</p>
-            </section>
-            <section>
-              <h2>Modelling &amp; preparation</h2>
-              <p>dim_student, dim_year_group, dim_subject, dim_term, fact_assessment. DAX measures for current-term mean, baseline mean (excluding current term), effort score (delta vs baseline normalised by standard deviation), and trend.</p>
-            </section>
-            <section>
-              <h2>Validation</h2>
-              <p>Walked the principal through a sample of high-baseline and low-baseline students to confirm the metric matched what teachers actually felt was going on. Adjusted normalisation parameters until the score matched professional judgement.</p>
-            </section>
-            <section>
-              <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Walkthroughs with teachers and the principal, plus a short written explanation of how the effort score was calculated and its limitations — so the metric could be defended to parents and used consistently across staff.</p>
-            </section>
-            <section>
-              <h2>Outcomes</h2>
-              <p>Teachers now have an objective effort metric that doesn't penalise consistently strong students. Conversations with parents are easier because the score is explainable and defensible. The principal reviews trends across year groups without sifting through spreadsheets.</p>
-            </section>
-            <section>
-              <h2>Reflection</h2>
-              <p>Designing a metric is a stakeholder conversation, not a maths exercise. The normalisation parameters had to match what teachers already sensed about their students, otherwise the metric would have been dismissed regardless of how mathematically tidy it was.</p>
-            </section>
-          </article>
-          <aside class="case-sidebar">
-            <div class="card">
-              <h3>At a glance</h3>
-              <ul class="clean">
-                <li><strong>Sector:</strong> Education</li>
-                <li><strong>Discipline:</strong> Power BI / Analytics Design</li>
-                <li><strong>Role:</strong> Data Analyst</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Tools used</h3>
-              <div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">Semantic model</span><span class="tag">Stakeholder walkthroughs</span></div>
-            </div>
-            <div class="card soft">
-              <h3>Confidentiality</h3>
-              <p style="font-size:0.88rem;">Dashboard image is an anonymised mock-up. Client identifiers, real values and proprietary visuals are not shown.</p>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+
+    <section class="case-hero compact-hero"><div class="container"><a class="case-back" href="../projects.html">Back to work</a><span class="eyebrow">Education</span><h1>Education Analytics: Student Progress &amp; Effort Reporting</h1><p class="lead">An education analytics case focused on fair metric design, progress interpretation and Power BI communication.</p><div class="case-meta"><div><strong>Sector</strong><span>Education</span></div><div><strong>My role</strong><span>Power BI Developer</span></div><div><strong>Period</strong><span>Client-style analytics project</span></div><div><strong>Stack</strong><span>Power BI, DAX, Education analytics, Trend reporting</span></div></div><div class="impact-strip"><div><strong>Baseline normalisation</strong></div><div><strong>Longitudinal trends</strong></div><div><strong>Power BI reporting</strong></div><div><strong>Education context</strong></div></div></div></section>
+    <section><div class="container"><figure class="case-figure"><img src="../assets/img/projects/education-powerbi.svg" alt="Anonymised mock dashboard for Education Analytics: Student Progress and Effort Reporting" width="1600" height="900" loading="lazy" decoding="async"><figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client or proprietary data.</figcaption></figure><div class="case-body"><article><section class="summary-panel"><h2>Recruiter scan</h2><dl class="scan-list"><div><dt>Problem</dt><dd>Student progress needed fairer interpretation across baseline differences, not only raw attainment comparisons.</dd></div><div><dt>Build</dt><dd>Designed baseline-normalised performance metrics and longitudinal reporting in Power BI.</dd></div><div><dt>Result</dt><dd>Created a clearer view of progress and effort that supported more balanced interpretation over time.</dd></div></dl></section><section><h2>Business problem</h2><p>Raw student outcomes did not fully capture progress, especially where starting points differed.</p></section><section><h2>My role and ownership</h2><p>Designed reporting logic and visuals that better separated progress, effort and context.</p></section><section><h2>What I built</h2><p>Created baseline-normalised metrics and longitudinal trend views in Power BI.</p></section><section><h2>Validation and reliability</h2><p>Focused on metric definitions and interpretation so the report could support fairer conversations.</p></section><section><h2>Outcome</h2><p>The case shows how analytical judgement changes what a dashboard encourages people to notice.</p></section></article><aside class="case-sidebar"><div class="card"><h3>At a glance</h3><ul class="clean"><li><strong>Sector:</strong> Education</li><li><strong>Role:</strong> Power BI Developer</li><li><strong>Period:</strong> Client-style analytics project</li></ul></div><div class="card"><h3>Tools used</h3><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Education analytics</span><span class="tag">Trend reporting</span></div></div><div class="card soft"><h3>Why it matters</h3><p>Created a clearer view of progress and effort that supported more balanced interpretation over time.</p></div></aside></div></div></section>
+
   </main>
   <footer class="footer">
     <div class="container footer-grid">
       <div>
         <strong>Nikhara Inderlal</strong>
-        <p>Data Analytics Engineer &#124; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
+        <p>Sydney-based Analytics Engineer and BI Consultant building trusted semantic models, reporting layers and stakeholder-ready dashboards.</p>
       </div>
       <div>
-        <p><a href="../projects.html">View projects</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
-        <p>Portfolio rebuilt for GitHub Pages. Dashboard visuals are anonymised mock-ups created for demonstration.</p>
+        <p><a href="../projects.html">Work</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
+        <p><a href="../about.html">About</a> · <a href="../skills.html">Skills</a> · <a href="../writing.html">Writing</a> · <a href="../journey.html">Journey</a></p>
       </div>
     </div>
   </footer>

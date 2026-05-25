@@ -3,9 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Built a Tableau dashboard to help operational stakeholders review site-level expense and forecast performance, including MTD/YTD metrics, actuals versus forecast and $/tonne analysis.">
-  <title>Food Manufacturing & Distribution Performance Dashboard | Nikhara Inderlal</title>
+  <meta name="description" content="A Tableau case showing operational KPI framing and variance analysis for manufacturing stakeholders.">
+  <link rel="canonical" href="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/food-manufacturing-tableau.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Food Manufacturing &amp; Distribution Performance Dashboard | Nikhara Inderlal">
+  <meta property="og:description" content="A Tableau case showing operational KPI framing and variance analysis for manufacturing stakeholders.">
+  <meta property="og:url" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/food-manufacturing-tableau.html">
+  <meta property="og:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Food Manufacturing &amp; Distribution Performance Dashboard | Nikhara Inderlal">
+  <meta name="twitter:description" content="A Tableau case showing operational KPI framing and variance analysis for manufacturing stakeholders.">
+  <meta name="twitter:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
+  <title>Food Manufacturing &amp; Distribution Performance Dashboard | Nikhara Inderlal</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Food Manufacturing & Distribution Performance Dashboard","author":{"@type":"Person","name":"Nikhara Inderlal"},"url":"https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/food-manufacturing-tableau.html","about":["Tableau","Alteryx","KPI design","Variance analysis"]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,110 +25,34 @@
     <div class="container navbar">
       <a href="../index.html" class="brand" aria-label="Nikhara Inderlal home">
         <span class="brand-mark">NI</span>
-        <span>Nikhara Inderlal<br><span>Data Analytics Engineer &#124; BI Consultant</span></span>
+        <span>Nikhara Inderlal<br><span>Sydney Analytics Engineer | BI Consultant</span></span>
       </a>
       <button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav aria-label="Main navigation">
         <ul class="nav-links" id="site-nav" data-nav-links>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../skills.html">Skills</a></li>
-          <li><a href="../journey.html">Journey</a></li>
-          <li><a href="../writing.html">Writing</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+<li><a class="active" aria-current="page" href="../projects.html">Work</a></li>
+<li><a href="../resume.html">Resume</a></li>
+<li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main">
-    <section class="case-hero">
-      <div class="container">
-        <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Tableau Dashboard</span>
-        <h1>Food Manufacturing & Distribution Performance Dashboard</h1>
-        <p class="lead">Site-level expense and forecast performance with MTD/YTD metrics, actuals vs forecast and $/tonne analysis.</p>
-        <div class="case-meta">
-          <div><strong>Sector</strong><span>Food Manufacturing</span></div>
-          <div><strong>Role</strong><span>Data Analyst</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Tableau, Alteryx, Calculated fields, KPI design</span></div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <figure class="case-figure">
-          <img src="../assets/img/projects/food-manufacturing.svg" alt="Anonymised mock dashboard for Food Manufacturing & Distribution Performance Dashboard">
-          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
-        </figure>
-        <div class="case-body">
-          <article>
-            <section>
-              <h2>Context</h2>
-              <p>Operations leaders across multiple manufacturing and distribution sites needed a single weekly view of expense performance against forecast, with the ability to drill into specific cost categories and compare site efficiency on a normalised $/tonne basis.</p>
-            </section>
-            <section>
-              <h2>Business problem</h2>
-              <p>Site managers were each interpreting their own numbers differently and weekly variance reviews were spent reconciling figures rather than discussing causes. Leadership had no consistent benchmark to compare site efficiency.</p>
-            </section>
-            <section>
-              <h2>Approach</h2>
-              <p>Used Alteryx to consolidate forecast, actuals and tonnage extracts from multiple source systems, normalise category labels, and produce a clean reporting-ready dataset. Built the Tableau dashboard around a small set of clear executive KPIs with consistent variance treatment.</p>
-            </section>
-            <section>
-              <h2>Modelling &amp; preparation</h2>
-              <p>Calculated fields for MTD/YTD variance, $/tonne, and forecast-attainment percentage. Reusable parameters for time period and site, with LOD calculations to keep site benchmarks correct under filter changes.</p>
-            </section>
-            <section>
-              <h2>Validation</h2>
-              <p>Variance reconciliation against finance's manual workbook for two reporting periods, edge-case checks on negative actuals and zero-tonne sites, and a walkthrough with the operations lead before publishing.</p>
-            </section>
-            <section>
-              <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Live walkthroughs with site managers and the operations lead, with a short follow-up Q&amp;A session a week later to capture refinements. Dashboard published with a one-page interpretation guide so new viewers could read it without a verbal handover.</p>
-            </section>
-            <section>
-              <h2>Outcomes</h2>
-              <p>Site managers can now review their own performance and benchmark against peer sites in one place. The weekly variance review is shorter and the conversation moves faster from 'what happened' to 'why' and 'what we will do about it'.</p>
-            </section>
-            <section>
-              <h2>Reflection</h2>
-              <p>Restraint on KPI count was the call that mattered most. The initial brief asked for a long list of metrics; agreeing on a smaller, sharper set made the dashboard more useful and the weekly conversation more productive.</p>
-            </section>
-          </article>
-          <aside class="case-sidebar">
-            <div class="card">
-              <h3>At a glance</h3>
-              <ul class="clean">
-                <li><strong>Sector:</strong> Food Manufacturing</li>
-                <li><strong>Discipline:</strong> Tableau Dashboard</li>
-                <li><strong>Role:</strong> Data Analyst</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Tools used</h3>
-              <div class="tags"><span class="tag">Tableau</span><span class="tag">Alteryx</span><span class="tag">Calculated fields</span><span class="tag">KPI design</span><span class="tag">Variance analysis</span></div>
-            </div>
-            <div class="card soft">
-              <h3>Confidentiality</h3>
-              <p style="font-size:0.88rem;">Dashboard image is an anonymised mock-up. Client identifiers, real values and proprietary visuals are not shown.</p>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+
+    <section class="case-hero compact-hero"><div class="container"><a class="case-back" href="../projects.html">Back to work</a><span class="eyebrow">Food manufacturing</span><h1>Food Manufacturing &amp; Distribution Performance Dashboard</h1><p class="lead">A Tableau case showing operational KPI framing and variance analysis for manufacturing stakeholders.</p><div class="case-meta"><div><strong>Sector</strong><span>Food manufacturing</span></div><div><strong>My role</strong><span>Tableau / BI Developer</span></div><div><strong>Period</strong><span>Client-style analytics project</span></div><div><strong>Stack</strong><span>Tableau, Alteryx, KPI design, Variance analysis</span></div></div><div class="impact-strip"><div><strong>MTD/YTD metrics</strong></div><div><strong>Actuals vs forecast</strong></div><div><strong>$/tonne analysis</strong></div><div><strong>Operational dashboard</strong></div></div></div></section>
+    <section><div class="container"><figure class="case-figure"><img src="../assets/img/projects/food-manufacturing.svg" alt="Anonymised mock dashboard for Food Manufacturing and Distribution Performance Dashboard" width="1600" height="900" loading="lazy" decoding="async"><figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client or proprietary data.</figcaption></figure><div class="case-body"><article><section class="summary-panel"><h2>Recruiter scan</h2><dl class="scan-list"><div><dt>Problem</dt><dd>Operational stakeholders needed a clearer way to compare site-level expense, forecast and throughput performance.</dd></div><div><dt>Build</dt><dd>Built a Tableau dashboard with MTD/YTD metrics, actuals versus forecast, expense analysis and dollar-per-tonne views.</dd></div><div><dt>Result</dt><dd>Turned operational data into a structured performance review surface for site and management discussions.</dd></div></dl></section><section><h2>Business problem</h2><p>Manufacturing and distribution stakeholders needed clearer visibility into expenses, forecasts and site performance.</p></section><section><h2>My role and ownership</h2><p>Prepared the reporting data and created Tableau views that supported operational review rather than one-off analysis.</p></section><section><h2>What I built</h2><p>Designed MTD/YTD metrics, actuals-versus-forecast comparisons and dollar-per-tonne analysis in a Tableau dashboard.</p></section><section><h2>Validation and reliability</h2><p>Checked calculations and dashboard views against source categories and stakeholder expectations.</p></section><section><h2>Outcome</h2><p>The project demonstrates practical KPI design and operational storytelling in Tableau.</p></section></article><aside class="case-sidebar"><div class="card"><h3>At a glance</h3><ul class="clean"><li><strong>Sector:</strong> Food manufacturing</li><li><strong>Role:</strong> Tableau / BI Developer</li><li><strong>Period:</strong> Client-style analytics project</li></ul></div><div class="card"><h3>Tools used</h3><div class="tags"><span class="tag">Tableau</span><span class="tag">Alteryx</span><span class="tag">KPI design</span><span class="tag">Variance analysis</span></div></div><div class="card soft"><h3>Why it matters</h3><p>Turned operational data into a structured performance review surface for site and management discussions.</p></div></aside></div></div></section>
+
   </main>
   <footer class="footer">
     <div class="container footer-grid">
       <div>
         <strong>Nikhara Inderlal</strong>
-        <p>Data Analytics Engineer &#124; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
+        <p>Sydney-based Analytics Engineer and BI Consultant building trusted semantic models, reporting layers and stakeholder-ready dashboards.</p>
       </div>
       <div>
-        <p><a href="../projects.html">View projects</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
-        <p>Portfolio rebuilt for GitHub Pages. Dashboard visuals are anonymised mock-ups created for demonstration.</p>
+        <p><a href="../projects.html">Work</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
+        <p><a href="../about.html">About</a> · <a href="../skills.html">Skills</a> · <a href="../writing.html">Writing</a> · <a href="../journey.html">Journey</a></p>
       </div>
     </div>
   </footer>
