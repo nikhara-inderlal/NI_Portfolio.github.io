@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Built a web analytics extraction and transformation workflow using Alteryx and the Google Analytics API, creating dimensional and flattened reporting layers for website and marketing performance analysis.">
-  <title>Web Analytics API Pipeline | Nikhara Inderlal</title>
+  <meta name="description" content="Built a multi-site GA4-to-BigQuery web analytics pipeline with scheduled daily loads, DDL schema design, parameter unnesting, Alteryx via service-account ODBC, SQL Server audit logging and MoM/YoY variance reporting.">
+  <title>Multi-site GA4 to BigQuery Analytics Pipeline | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div class="container navbar">
       <a href="../index.html" class="brand" aria-label="Nikhara Inderlal home">
         <span class="brand-mark">NI</span>
-        <span>Nikhara Inderlal<br><span>Data Analyst &amp; BI Consultant</span></span>
+        <span>Nikhara Inderlal<br><span>Data Analytics Engineer &#124; BI Consultant</span></span>
       </a>
       <button class="mobile-toggle" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav aria-label="Main navigation">
@@ -34,70 +34,75 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">API / ETL</span>
-        <h1>Web Analytics API Pipeline</h1>
-        <p class="lead">Alteryx + Google Analytics API workflow producing dimensional and flattened reporting layers.</p>
+        <span class="eyebrow">Analytics engineering · Sales &amp; Marketing</span>
+        <h1>Multi-site GA4 to BigQuery Analytics Pipeline</h1>
+        <p class="lead">GA4 export to BigQuery with scheduled daily loads, DDL schema design and parameter unnesting across multiple websites, with Alteryx-driven curation, SQL Server audit logging and MoM/YoY variance reporting.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Digital / Web Analytics</span></div>
+          <div><strong>Sector</strong><span>Internal Sales &amp; Marketing analytics</span></div>
           <div><strong>Role</strong><span>Analytics Engineer</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Alteryx, Alteryx Server, Google Analytics API, SQL Server</span></div>
+          <div><strong>Engagement</strong><span>Aug &ndash; Sep 2025 (enhanced in subsequent phase)</span></div>
+          <div><strong>Tools</strong><span>BigQuery, GA4, Alteryx Server, SQL Server, Power BI</span></div>
         </div>
       </div>
     </section>
     <section>
       <div class="container">
         <figure class="case-figure">
-          <img src="../assets/img/projects/web-analytics.svg" alt="Anonymised mock dashboard for Web Analytics API Pipeline">
-          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
+          <img src="../assets/img/projects/web-analytics.svg" alt="Anonymised mock dashboard for the Multi-site GA4 to BigQuery Analytics Pipeline">
+          <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing internal data.</figcaption>
         </figure>
         <div class="case-body">
           <article>
             <section>
               <h2>Context</h2>
-              <p>Marketing wanted self-serve reporting on website behaviour, channel performance and campaign conversion without continually exporting from the Google Analytics UI. The data needed to land in SQL Server in a shape downstream BI tools could use.</p>
+              <p>Sales and marketing needed consolidated web analytics across multiple websites without relying on the Google Analytics UI or manual exports. The team wanted analysis-ready tables in a single, governed warehouse, with consistent schemas across sites and a refresh cadence the business could trust for daily and month-on-month reporting.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>Manual GA exports were slow, inconsistent and didn't preserve history beyond the API's window. Downstream reports kept breaking when someone changed an export, and historical comparisons were unreliable.</p>
+              <p>GA4&rsquo;s native export schema is highly nested (event_params, user_properties, items) and varies per site, so meaningful cross-site analysis needed flattened, conformed tables rather than raw exports. There was no consolidated multi-site analytics layer, no audit trail on refresh health, and no governed variance reporting.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Built an Alteryx workflow that called the Google Analytics API on a schedule, handled paging and quota limits, and landed both a dimensional layer (for star-schema downstream use) and a flattened reporting layer (for ad-hoc analysis). Scheduled via Alteryx Server.</p>
+              <p>Implemented the GA4 export to BigQuery with scheduled daily loads and combined schema design (DDL) across multiple websites, with parameter unnesting so analysis-ready tables exposed event-level fields as columns instead of nested arrays. Alteryx was then used to extract curated BigQuery data into fact and dimension structures for downstream reporting, with SQL Server audit logging to validate data freshness and key integrity each run.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Dimensional layer: dim_date, dim_channel, dim_campaign, dim_page, fact_session, fact_event. Flattened layer: one denormalised wide table for analysts who don't want to write joins. Both layers refresh from the same source workflow so they stay consistent.</p>
+              <p>Designed the combined BigQuery schema with DDL so all sites landed in a consistent shape. Used parameter unnesting to surface GA4&rsquo;s nested event parameters as queryable columns for analysis-ready tables. Consolidated tables across multiple websites for cross-site reporting. Curated data was then shaped into fact and dimension structures in the downstream layer for Power BI consumption.</p>
             </section>
             <section>
-              <h2>Validation</h2>
-              <p>Cross-checked Alteryx outputs against the GA UI for matched date ranges, monitored row counts and API quota usage over the first month, and added explicit run-status logging so failures surface to the analytics team instead of going silent.</p>
+              <h2>Service accounts &amp; integration</h2>
+              <p>Configured service accounts for controlled BigQuery access, and connected Alteryx to BigQuery via a JSON key and ODBC for the curated extracts. This kept credentials managed centrally and avoided per-user authentication for scheduled workflows.</p>
             </section>
             <section>
-              <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Marketing and analytics teams onboarded with a short walkthrough of both layers and the run-status log. Documentation handed over covered the schema, the refresh schedule, the GA quota model and the failure-alerting setup.</p>
+              <h2>Audit logging &amp; reliability</h2>
+              <p>Implemented SQL Server audit logging to validate data freshness and key integrity on every run, so missing partitions, late-arriving rows or referential gaps surfaced explicitly rather than failing silently downstream.</p>
+            </section>
+            <section>
+              <h2>Reporting</h2>
+              <p>Enhanced downstream reporting with MoM/YoY variance views across key segments in Power BI, so sales and marketing could see month-on-month and year-on-year shifts in traffic, channel mix and conversion behaviour at a glance rather than reconstructing comparisons in spreadsheets.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Marketing now has reliable channel and campaign analysis without manual exports. Downstream dashboards refresh on a schedule, and the dual-layer design means both star-schema users and ad-hoc analysts get what they need from the same source.</p>
+              <p>Sales and marketing now consume a consolidated, scheduled, multi-site GA4 dataset with explicit freshness and integrity checks, plus MoM/YoY variance views for fast trend interpretation. The combined schema means cross-site analysis works without per-site reconciliation, and the audit log means refresh problems are visible rather than hidden.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>Building two layers instead of one was the right trade-off. The dimensional layer kept downstream reports clean; the flattened layer kept ad-hoc analysts unblocked. Trying to serve both groups with one shape would have made both of them work harder.</p>
+              <p>The biggest lift came from treating GA4&rsquo;s nested schema as a modelling problem rather than a query-time inconvenience. DDL-defined combined schemas with parameter unnesting once, upstream, made everything downstream &mdash; Alteryx curation, audit logging, variance views &mdash; cleaner and more durable.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Digital / Web Analytics</li>
-                <li><strong>Discipline:</strong> API / ETL</li>
+                <li><strong>Sector:</strong> Internal Sales &amp; Marketing analytics</li>
+                <li><strong>Discipline:</strong> Analytics engineering (ELT, schema design, audit)</li>
                 <li><strong>Role:</strong> Analytics Engineer</li>
+                <li><strong>Period:</strong> Aug &ndash; Sep 2025</li>
               </ul>
             </div>
             <div class="card">
               <h3>Tools used</h3>
-              <div class="tags"><span class="tag">Alteryx</span><span class="tag">Alteryx Server</span><span class="tag">Google Analytics API</span><span class="tag">SQL Server</span><span class="tag">Dimensional modelling</span></div>
+              <div class="tags"><span class="tag">BigQuery</span><span class="tag">GA4</span><span class="tag">Alteryx</span><span class="tag">Alteryx Server</span><span class="tag">ODBC</span><span class="tag">SQL Server</span><span class="tag">DDL</span><span class="tag">Power BI</span><span class="tag">Dimensional modelling</span></div>
             </div>
             <div class="card soft">
               <h3>Confidentiality</h3>
@@ -112,7 +117,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Nikhara Inderlal</strong>
-        <p>Data Analyst &amp; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
+        <p>Data Analytics Engineer &#124; BI Consultant focused on trusted reporting, semantic models, dashboard design and stakeholder-ready analytics.</p>
       </div>
       <div>
         <p><a href="../projects.html">View projects</a> · <a href="../resume.html">Resume</a> · <a href="../contact.html">Contact</a></p>
