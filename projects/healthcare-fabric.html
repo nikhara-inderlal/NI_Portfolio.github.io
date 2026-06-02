@@ -8,14 +8,14 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Enterprise Healthcare Reporting Rebuild | Nikhara Inderlal">
-  <meta property="og:description" content="Case study by Nikhara Inderlal — Data Analytics Engineer and BI Consultant in Sydney.">
+  <meta property="og:description" content="Case study by Nikhara Inderlal, Data Analytics Engineer, BI Consultant and Data Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/projects/healthcare-fabric.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Enterprise Healthcare Reporting Rebuild | Nikhara Inderlal">
-  <meta name="twitter:description" content="Case study by Nikhara Inderlal — Data Analytics Engineer and BI Consultant in Sydney.">
+  <meta name="twitter:description" content="Case study by Nikhara Inderlal, Data Analytics Engineer, BI Consultant and Data Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/NI_Portfolio.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Rebuilt Finance &amp; Assurance reporting on Microsoft Fabric with a shared Direct Lake semantic model, T-SQL and Spark notebooks, reconciliation/tie-outs and a point-in-time Headcount &amp; Turnover snapshot model.">
+  <meta name="description" content="Rebuilt reporting across Finance, Assurance and HR or P&amp;C domains on Microsoft Fabric with a shared Direct Lake semantic model, T-SQL and Spark notebooks, SharePoint Lists and Power Apps integration, reconciliation tie-outs and a point-in-time Headcount and Turnover snapshot model.">
   <title>Enterprise Healthcare Reporting Rebuild | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -46,14 +46,14 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Enterprise BI · Finance &amp; Assurance</span>
+        <span class="eyebrow">Enterprise BI · Finance, Assurance and HR or P&amp;C</span>
         <h1>Enterprise Healthcare Reporting Rebuild</h1>
-        <p class="lead">Rebuilding Finance &amp; Assurance reporting on Microsoft Fabric with a shared Direct Lake semantic model, T-SQL and Spark notebook curation, and point-in-time workforce reporting.</p>
+        <p class="lead">Healthcare reporting rebuild across Finance, Assurance and HR or P&amp;C domains using Microsoft Fabric, Power BI, T-SQL, Spark notebooks, Direct Lake semantic modelling and reconciliation checks.</p>
         <div class="case-meta">
           <div><strong>Sector</strong><span>Healthcare</span></div>
-          <div><strong>Role</strong><span>Analytics Engineer / Power BI Developer</span></div>
-          <div><strong>Engagement</strong><span>Sep 2025 &ndash; Present</span></div>
-          <div><strong>Tools</strong><span>Fabric (Lakehouse/Warehouse, Direct Lake), Power BI, T-SQL, Spark, Azure DevOps, Confluence</span></div>
+          <div><strong>Role</strong><span>Analytics Engineer / Power BI Developer / Fabric Developer</span></div>
+          <div><strong>Engagement</strong><span>Sep 2025 to Present</span></div>
+          <div><strong>Tools</strong><span>Fabric (Lakehouse/Warehouse, Direct Lake), Dataflow Gen2, Power BI, T-SQL, Spark, D365 Finance, SharePoint Lists, Power Apps, Azure DevOps, Confluence</span></div>
         </div>
       </div>
     </section>
@@ -67,15 +67,15 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>Finance &amp; Assurance reporting across the client was fragmented: different teams produced the same metric with different numbers, there was no shared dimensional model, and refresh and validation were largely manual. Without a common semantic layer it was difficult to reconcile KPIs or to give finance leadership a defensible audit path from source to published figure.</p>
+              <p>A healthcare organisation needed to rebuild reporting across Finance, Assurance and HR or P&amp;C domains. Reporting was fragmented across teams and domains, with inconsistent metric definitions, limited shared modelling and manual validation work, and gaps between source systems, curated reporting tables and final Power BI outputs. Without a common semantic layer it was difficult to reconcile KPIs or to give leadership a defensible audit path from source to published figure.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>Stakeholders needed a single, governed reporting layer that could support KPI and variance reporting, point-in-time snapshots and exception monitoring &mdash; while also reducing remediation time when source data had gaps. The previous setup didn&rsquo;t expose missing reference mappings, so downstream transaction reporting silently lost rows.</p>
+              <p>Stakeholders needed a single, governed reporting layer that could support KPI and variance reporting, point-in-time snapshots and exception monitoring, while also reducing remediation time when source data had gaps. The previous setup did not expose missing reference mappings, so downstream transaction reporting silently lost rows.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Contributed to rebuilding and standardising Finance &amp; Assurance reporting using a shared semantic model on Direct Lake, with curated fact and dimension structures to improve consistency and scalability. The work spanned the curation layer (T-SQL and Spark notebooks in Fabric), the semantic model (reusable base measures), the report layer (Power BI and Excel) and the delivery layer (UAT, controlled DEV&ndash;TEST deployments).</p>
+              <p>Contributed to rebuilding and standardising reporting across Finance, Assurance and HR or P&amp;C domains using a shared semantic model on Direct Lake, with curated fact and dimension structures to improve consistency and scalability. The work spanned the curation layer (T-SQL and Spark notebooks in Fabric), the semantic model layer (reusable base measures), the report layer (Power BI and Excel), and a user workflow layer where SharePoint List data was brought into the reporting workflow, transformed into reporting-ready structures and connected into Power BI. Delivery used UAT and controlled DEV to TEST deployments.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
@@ -84,19 +84,23 @@
             </section>
             <section>
               <h2>Reconciliation, tie-outs &amp; audit</h2>
-              <p>Validated outputs across three layers &mdash; source extracts, curated datasets and final report outputs &mdash; using reconciliation/tie-outs and audit checks at each boundary. Built an exception report to surface missing reference mappings impacting downstream transaction reporting (for example, unmapped payment attributes or missing staff identifiers), which improved completeness and reduced remediation time when source data drifted.</p>
+              <p>Validated outputs across three layers, source extracts, curated datasets and final report outputs, using reconciliation tie-outs and audit checks at each boundary. Built an exception report to surface missing reference mappings impacting downstream transaction reporting (for example, unmapped payment attributes or missing staff identifiers), which improved completeness and reduced remediation time when source data drifted.</p>
+            </section>
+            <section>
+              <h2>SharePoint Lists, Power Apps and Power BI integration</h2>
+              <p>Integrated SharePoint Lists, Microsoft Fabric, Power BI and Power Apps into an interactive reporting workflow. SharePoint List data was ingested into Fabric, transformed into reporting-ready structures and surfaced in Power BI. A Power Apps app was embedded inside the Power BI report so users could update or edit list-based operational data while viewing relevant reporting context. This helped move the report from a static reporting layer toward a more interactive business workflow.</p>
             </section>
             <section>
               <h2>Reporting &amp; delivery</h2>
-              <p>Delivered a suite of Finance &amp; Assurance reporting outputs in Power BI and Excel, covering KPI and variance reporting, point-in-time snapshots and exception monitoring. Worked with D365 Finance data where the reporting drew on financial source systems. Supported UAT and controlled DEV&ndash;TEST deployments with progress tracking and stakeholder updates through Azure DevOps and Confluence.</p>
+              <p>Delivered a suite of reporting outputs across Finance, Assurance and HR or P&amp;C domains in Power BI and Excel, covering KPI and variance reporting, point-in-time snapshots and exception monitoring. Worked with D365 Finance data where the reporting drew on financial source systems. Supported UAT and controlled DEV to TEST deployments with progress tracking and stakeholder updates through Azure DevOps and Confluence.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Finance &amp; Assurance now consume governed metrics from a shared Direct Lake semantic model, with a clear audit path from source through curated layer to published figure. Point-in-time workforce reporting is supported through the snapshot extension to the dimensional model, and the exception report surfaces reference-mapping gaps before they reach downstream transaction reports.</p>
+              <p>Finance, Assurance and HR or P&amp;C teams now consume governed metrics from a shared Direct Lake semantic model with reusable measures, giving a clear audit path from source through curated layer to published figure. Point-in-time workforce reporting is supported through the snapshot extension to the dimensional model, exception reporting surfaces reference-mapping gaps before they reach downstream transaction reports, and SharePoint Lists with embedded Power Apps let users update operational data in reporting context. Together these improved trust in reporting outputs across the three domains.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>The most valuable parts of this work weren&rsquo;t the individual visuals &mdash; they were the curation logic, the reusable measures and the reconciliation/tie-outs that made the numbers trustworthy. Treating data quality as a first-class deliverable (unit tests, tie-outs, audit logging, exception reporting) is what made the rebuild stick.</p>
+              <p>The most valuable parts of this work were not the individual visuals; they were the curation logic, the reusable measures and the reconciliation tie-outs that made the numbers trustworthy. Treating data quality as a first-class deliverable (unit tests, tie-outs, audit logging, exception reporting) is what made the rebuild stick.</p>
             </section>
           </article>
           <aside class="case-sidebar">
@@ -104,14 +108,14 @@
               <h3>At a glance</h3>
               <ul class="clean">
                 <li><strong>Sector:</strong> Healthcare</li>
-                <li><strong>Discipline:</strong> Finance &amp; Assurance reporting</li>
-                <li><strong>Role:</strong> Analytics Engineer / Power BI Developer</li>
-                <li><strong>Period:</strong> Sep 2025 &ndash; Present</li>
+                <li><strong>Discipline:</strong> Finance, Assurance and HR or P&amp;C reporting</li>
+                <li><strong>Role:</strong> Analytics Engineer / Power BI Developer / Fabric Developer</li>
+                <li><strong>Period:</strong> Sep 2025 to Present</li>
               </ul>
             </div>
             <div class="card">
               <h3>Tools used</h3>
-              <div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">Lakehouse</span><span class="tag">Warehouse</span><span class="tag">Direct Lake</span><span class="tag">Power BI</span><span class="tag">T-SQL</span><span class="tag">Spark notebooks</span><span class="tag">DAX</span><span class="tag">D365 Finance</span><span class="tag">Azure DevOps</span><span class="tag">Confluence</span></div>
+              <div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">Lakehouse</span><span class="tag">Warehouse</span><span class="tag">Direct Lake</span><span class="tag">Dataflow Gen2</span><span class="tag">Power BI</span><span class="tag">T-SQL</span><span class="tag">Spark notebooks</span><span class="tag">DAX</span><span class="tag">D365 Finance</span><span class="tag">SharePoint Lists</span><span class="tag">Power Apps</span><span class="tag">Azure DevOps</span><span class="tag">Confluence</span></div>
             </div>
             <div class="card soft">
               <h3>Confidentiality</h3>
@@ -126,7 +130,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Nikhara Inderlal</strong>
-        <p>Data Analytics Engineer | BI Consultant in Sydney &mdash; full Australian work rights, open to new roles.</p>
+        <p>Data Analytics Engineer | BI Consultant | Data Engineer in Sydney, with full Australian work rights and open to new roles.</p>
         <p class="footer-cta"><a class="button secondary" href="../assets/docs/Nikhara-Inderlal-Resume-2026.pdf" download>Download CV</a> <a class="button ghost" href="mailto:nikhara.inderlal@proton.me">Email</a> <a class="button ghost" href="https://www.linkedin.com/in/nikhara-i/" target="_blank" rel="noopener">LinkedIn</a></p>
       </div>
       <div>
