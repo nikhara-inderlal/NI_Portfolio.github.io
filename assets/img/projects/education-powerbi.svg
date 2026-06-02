@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Student Progress &amp; Effort Reporting — anonymised mock dashboard">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Student Progress &amp; Effort Reporting · anonymised mock dashboard">
   <rect width="1600" height="900" fill="#f3f8fc"/>
 
   <!-- header bar -->
@@ -21,7 +21,7 @@
   <rect x="40" y="120" width="367" height="100" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
   <text x="62" y="150" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8892a6" letter-spacing="1.2">STUDENTS</text>
   <text x="62" y="186" font-family="-apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1a2233">1,284</text>
-  <text x="62" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5b6479">—</text>
+  <text x="62" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5b6479">flat</text>
   <rect x="297" y="196" width="5" height="8" rx="1" fill="#3590c6" fill-opacity="0.25"/>
   <rect x="305" y="177" width="5" height="27" rx="1" fill="#3590c6" fill-opacity="0.30"/>
   <rect x="313" y="175" width="5" height="29" rx="1" fill="#3590c6" fill-opacity="0.34"/>
@@ -69,7 +69,7 @@
   <rect x="1183" y="120" width="367" height="100" rx="8" fill="#ffffff" stroke="#dfe3ec"/>
   <text x="1205" y="150" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#8892a6" letter-spacing="1.2">YEAR GROUPS</text>
   <text x="1205" y="186" font-family="-apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#1a2233">7</text>
-  <text x="1205" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5b6479">—</text>
+  <text x="1205" y="208" font-family="-apple-system, Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#5b6479">flat</text>
   <rect x="1440" y="172" width="5" height="32" rx="1" fill="#3590c6" fill-opacity="0.25"/>
   <rect x="1448" y="155" width="5" height="49" rx="1" fill="#3590c6" fill-opacity="0.30"/>
   <rect x="1456" y="158" width="5" height="46" rx="1" fill="#3590c6" fill-opacity="0.34"/>
