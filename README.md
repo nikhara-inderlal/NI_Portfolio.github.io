@@ -1,6 +1,6 @@
 # Nikhara Inderlal Portfolio Rebuild
 
-This is a clean static GitHub Pages rebuild of the previous portfolio.
+This is a clean static GitHub Pages rebuild of the previous portfolio website.
 
 ## Structure
 
