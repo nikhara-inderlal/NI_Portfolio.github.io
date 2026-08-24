@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/healthcare-fabric.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Enterprise Healthcare Reporting Rebuild | Nikhara Inderlal">
+  <meta property="og:title" content="Enterprise Healthcare Analytics at Abano | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/healthcare-fabric.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Enterprise Healthcare Reporting Rebuild | Nikhara Inderlal">
+  <meta name="twitter:title" content="Enterprise Healthcare Analytics at Abano | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Rebuilt reporting across Finance, Assurance and HR or P&amp;C domains on Microsoft Fabric with a shared Direct Lake semantic model, T-SQL and Spark notebooks, SharePoint Lists and Power Apps integration, reconciliation tie-outs and a point-in-time Headcount and Turnover snapshot model.">
-  <title>Enterprise Healthcare Reporting Rebuild | Nikhara Inderlal</title>
+  <meta name="description" content="Abano Healthcare enterprise analytics case study: a governed 70-table Direct Lake model across Finance, Marketing, Clinical Assurance and People and Culture, self-service exception reporting with an embedded Power App, a flexible CLTV and churn framework, governed Excel finance reporting and an adopted Region Master.">
+  <title>Enterprise Healthcare Analytics at Abano | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,76 +46,109 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Enterprise BI · Finance, Assurance and HR or P&amp;C</span>
-        <h1>Enterprise Healthcare Reporting Rebuild</h1>
-        <p class="lead">Healthcare reporting rebuild across Finance, Assurance and HR or P&amp;C domains using Microsoft Fabric, Power BI, T-SQL, Spark notebooks, Direct Lake semantic modelling and reconciliation checks.</p>
+        <span class="eyebrow">Enterprise analytics · Finance, Marketing, Clinical Assurance and People &amp; Culture</span>
+        <h1>Enterprise Healthcare Analytics at Abano</h1>
+        <p class="lead">A year inside a governed Microsoft Fabric estate serving 220+ dental practices across Australia and New Zealand, working across four business domains from SME requirements through modelling, validation and production release.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Healthcare</span></div>
-          <div><strong>Role</strong><span>Analytics Engineer / Power BI Developer / Fabric Developer</span></div>
+          <div><strong>Client</strong><span>Abano Healthcare, Australasia's largest dental support organisation, 220+ practices across AU and NZ</span></div>
+          <div><strong>Role</strong><span>Analytics Engineer / Power BI Consultant</span></div>
           <div><strong>Engagement</strong><span>Sep 2025 to Present</span></div>
-          <div><strong>Tools</strong><span>Fabric (Lakehouse/Warehouse, Direct Lake), Dataflow Gen2, Power BI, T-SQL, Spark, D365 Finance, SharePoint Lists, Power Apps, Azure DevOps, Confluence</span></div>
+          <div><strong>Tools</strong><span>Fabric (Lakehouse/Warehouse, Direct Lake), Dataflow Gen2, Power BI, DAX, T-SQL, Spark, Power Apps, Power Automate, SharePoint Lists, D365, PayGlobal, Excel, Azure DevOps, Confluence</span></div>
         </div>
       </div>
     </section>
     <section>
       <div class="container">
         <figure class="case-figure">
-          <img src="../assets/img/projects/healthcare-fabric.svg" alt="Anonymised mock dashboard for Enterprise Healthcare Reporting Rebuild" loading="lazy" width="1600" height="900" decoding="async">
+          <img src="../assets/img/projects/healthcare-fabric.svg" alt="Anonymised mock dashboard for the Abano Healthcare enterprise analytics work" loading="lazy" width="1600" height="900" decoding="async">
           <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
         </figure>
         <div class="case-body">
           <article>
             <section>
               <h2>Context</h2>
-              <p>A healthcare organisation needed to rebuild reporting across Finance, Assurance and HR or P&amp;C domains. Reporting was fragmented across teams and domains, with inconsistent metric definitions, limited shared modelling and manual validation work, and gaps between source systems, curated reporting tables and final Power BI outputs. Without a common semantic layer it was difficult to reconcile KPIs or to give leadership a defensible audit path from source to published figure.</p>
+              <p>Abano Healthcare supports more than 220 dental practices across Australia and New Zealand. Reporting was fragmented across teams and domains, with inconsistent metric definitions, limited shared modelling and manual validation work, and gaps between source systems, curated reporting tables and final Power BI outputs. Source data spans Microsoft Dynamics 365, PayGlobal and multiple practice-management-system structures. Without a common semantic layer it was difficult to reconcile KPIs or to give leadership a defensible audit path from source to published figure.</p>
             </section>
             <section>
               <h2>Business problem</h2>
               <p>Stakeholders needed a single, governed reporting layer that could support KPI and variance reporting, point-in-time snapshots and exception monitoring, while also reducing remediation time when source data had gaps. The previous setup did not expose missing reference mappings, so downstream transaction reporting silently lost rows.</p>
+              <p>The consequences were practical rather than theoretical. Australia and New Zealand ran separate reporting with duplicated logic. Patient counts disagreed between reports because legacy logic mixed appointment-based activity counts with patient-dimension cohort counts. Clinical exception review depended on analysts rebuilding reports whenever a business threshold changed. Finance filled the gaps with manual lookups.</p>
+            </section>
+            <section>
+              <h2>My role and ownership</h2>
+              <p>I own delivery on this engagement from requirements through to production release. That means I lead the SME sessions with Finance, Marketing and Clinical Assurance stakeholders myself, translate what they describe into analytical requirements, design and build the solution, unit test and reconcile it, produce the technical and business documentation, run the walkthrough, incorporate feedback, obtain sign-off and deploy through controlled TEST to PROD release.</p>
+              <p>The build work is a mix of independent and collaborative. I work across a governed 70-table Gold-layer Direct Lake model built to strict star-schema standards; ten of those Gold tables I built independently, several of them end to end from Bronze through Gold. I have also improved upstream Bronze and Silver transformations, created the dimensional relationships and authored more than 400 report-specific measures.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Contributed to rebuilding and standardising reporting across Finance, Assurance and HR or P&amp;C domains using a shared semantic model on Direct Lake, with curated fact and dimension structures to improve consistency and scalability. The work spanned the curation layer (T-SQL and Spark notebooks in Fabric), the semantic model layer (reusable base measures), the report layer (Power BI and Excel), and a user workflow layer where SharePoint List data was brought into the reporting workflow, transformed into reporting-ready structures and connected into Power BI. Delivery used UAT and controlled DEV to TEST deployments.</p>
+              <p>Rebuilt and standardised reporting across the four domains on a shared Direct Lake semantic model, with curated fact and dimension structures for consistency and scale. The work spans the curation layer (T-SQL and Spark notebooks in Fabric), the semantic model layer (reusable governed measures), the report layer (Power BI and Excel), and a workflow layer where SharePoint Lists, Power Apps and Power Automate turn a report into something users can act inside. Previously fragmented reporting was consolidated into shared Australia and New Zealand solutions with row-level security and reusable governed measures, improving consistency across regions and removing duplicated report logic.</p>
             </section>
             <section>
-              <h2>Modelling &amp; preparation</h2>
-              <p>Created and enriched reporting tables using T-SQL and Spark notebooks in Fabric Lakehouse and Warehouse. Built reusable base measures so the same KPI meant the same thing across reports. Extended the dimensional model to support point-in-time reporting for workforce analysis.</p>
-              <p>Headcount and Turnover reporting was a specific build: ingested historical workforce snapshot data into Fabric, implemented snapshot logic in the Fabric Warehouse, and extended the dimensional model so headcount and turnover could be reported at any historical point in time rather than only at the latest state.</p>
+              <h2>The analytics estate</h2>
+              <p>Created and enriched reporting tables using T-SQL and Spark notebooks in Fabric Lakehouse and Warehouse, built to strict star-schema standards. Built reusable governed base measures so the same KPI means the same thing across reports, rather than being redefined report by report.</p>
+              <p>Metric integrity was part of the work rather than an afterthought. I standardised patient-count definitions across reports by correcting legacy logic that mixed appointment-based activity counts with patient-dimension cohort counts. That is a small technical change with a disproportionate effect: it is the difference between two reports that disagree and two reports the business can trust.</p>
+            </section>
+            <section>
+              <h2>Clinical Assurance: self-service thresholds and exception workflow</h2>
+              <p>Clinical exception reporting required users to identify, investigate, categorise and comment on exceptions, and every change to a business threshold meant going back to an analyst for a report change. The reporting was creating analyst dependency rather than removing it.</p>
+              <p>I built two self-service Clinical Assurance dashboards spanning more than twelve report pages, using page-specific parameters so users can adjust business thresholds themselves without repeated analyst redevelopment. KPI cards, measures, dynamic headings and contextual interpretation text all update immediately when a threshold changes, so the report explains the business meaning of the selected settings as well as the resulting numbers. Automated exception flagging with conditional colouring and exception-only scatter plots replaced a more manual process for locating outliers, making the cases that need investigation materially easier to find.</p>
+              <p>I then rebuilt and enhanced a Power App embedded within Power BI to support the investigation workflow itself: case statuses, categorisation and bulk commenting. Where multiple selected cases share the same outcome, bulk updates reduce repetitive update actions by up to approximately 95 per cent, and the investigation results feed back into governed enterprise reporting. Power Automate flows ingest secure Excel input into a SharePoint List and remove or reset SharePoint records, and the operational list is then ingested back into Fabric using Dataflow Gen2 to support a closed-loop analytics workflow.</p>
+              <p>This is the part of the engagement I would point an interviewer at. The dashboard was not the deliverable. The change was to the operational workflow around the analysis.</p>
+            </section>
+            <section>
+              <h2>Marketing: customer lifetime value, churn and retention</h2>
+              <p>Marketing needed to understand the relationship between retention and customer value, but any single definition of churn embeds an assumption. A patient who has not returned in twelve months means something different from one who has not returned in thirty-six, and the right threshold is a business judgement rather than a data one.</p>
+              <p>I built end-to-end marketing analytics covering customer demographics, retention, churn, Customer Lifetime Value and basket analysis. Rather than hard-coding one definition, I developed a flexible churn framework with 12, 24 and 36-month churn windows and 3, 6, 9 and 12-month patient cohorts, and designed the analytical logic so a change in churn assumption flows consistently through the related customer-value measures instead of requiring separate report versions.</p>
+              <p>The value is not the DAX. It is that Marketing gained a capability to test stricter or more relaxed churn definitions and immediately see the downstream effect on retention and CLTV, rather than being locked into one static definition of what a customer is worth.</p>
+            </section>
+            <section>
+              <h2>Finance: governed self-service reporting</h2>
+              <p>Finance needed governed enterprise numbers but also needed to keep working in Excel, where their own calculations and PivotTable analysis live. Those two requirements usually pull against each other, and the gap was being filled with manual lookups across fragmented sources.</p>
+              <p>I built two Excel-based Finance reports connected to the Fabric SQL analytics endpoint, supported by automated daily-refresh pipelines, consolidating multiple financial dimensions and measures into governed, daily-refreshed outputs. Finance keeps the flexibility of Excel for independent calculations and PivotTable analysis, but the underlying numbers are now governed enterprise data rather than assembled by hand. I also built reporting for taxation purposes and additional finance and variance analysis, with reconciliation and sign-off before production release.</p>
+            </section>
+            <section>
+              <h2>People &amp; Culture: point-in-time workforce analytics</h2>
+              <p>Workforce reporting relied on static month-end reporting, which answers what the headcount is now but not what it was at an arbitrary past date. I redesigned it using historical snapshots in Fabric so headcount and turnover can be analysed at any historical point in time, and created curated fact and dimension structures with reusable reporting logic to improve workforce metric consistency and historical analysis.</p>
+            </section>
+            <section>
+              <h2>Enterprise data governance: the Region Master</h2>
+              <p>Location definitions and mapping were inconsistent, which quietly undermines any State or Country level reporting built on top of them. I created and validated a governed practice-region-country mapping across Australia and New Zealand, validated it across both markets, and it was adopted as the Region Master and used to derive consistent State and Country attributes for patient and downstream reporting.</p>
+              <p>This is the clearest example of my work extending past report design into enterprise data governance: a reference asset other people's reporting now depends on.</p>
             </section>
             <section>
               <h2>Reconciliation, tie-outs &amp; audit</h2>
               <p>Validated outputs across three layers, source extracts, curated datasets and final report outputs, using reconciliation tie-outs and audit checks at each boundary. Built an exception report to surface missing reference mappings impacting downstream transaction reporting (for example, unmapped payment attributes or missing staff identifiers), which improved completeness and reduced remediation time when source data drifted.</p>
             </section>
             <section>
-              <h2>SharePoint Lists, Power Apps and Power BI integration</h2>
-              <p>Integrated SharePoint Lists, Microsoft Fabric, Power BI and Power Apps into an interactive reporting workflow. SharePoint List data was ingested into Fabric, transformed into reporting-ready structures and surfaced in Power BI. A Power Apps app was embedded inside the Power BI report so users could update or edit list-based operational data while viewing relevant reporting context. This helped move the report from a static reporting layer toward a more interactive business workflow.</p>
-            </section>
-            <section>
               <h2>Reporting &amp; delivery</h2>
-              <p>Delivered a suite of reporting outputs across Finance, Assurance and HR or P&amp;C domains in Power BI and Excel, covering KPI and variance reporting, point-in-time snapshots and exception monitoring. Worked with D365 Finance data where the reporting drew on financial source systems. Supported UAT and controlled DEV to TEST deployments with progress tracking and stakeholder updates through Azure DevOps and Confluence.</p>
+              <p>Delivered reporting across all four domains in Power BI and Excel, covering KPI and variance reporting, point-in-time snapshots and exception monitoring, drawing on Dynamics 365, PayGlobal and multiple practice-management-system structures. Delivery ran through SME discovery, modelling, unit testing, reconciliation, UAT, issue resolution, documentation, stakeholder approval and controlled production deployment, with progress tracking and stakeholder updates through Azure DevOps and Confluence.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Finance, Assurance and HR or P&amp;C teams now consume governed metrics from a shared Direct Lake semantic model with reusable measures, giving a clear audit path from source through curated layer to published figure. Point-in-time workforce reporting is supported through the snapshot extension to the dimensional model, exception reporting surfaces reference-mapping gaps before they reach downstream transaction reports, and SharePoint Lists with embedded Power Apps let users update operational data in reporting context. Together these improved trust in reporting outputs across the three domains.</p>
+              <p>Finance, Marketing, Clinical Assurance and People &amp; Culture now consume governed metrics from a shared Direct Lake semantic model with reusable measures, giving a clear audit path from source through curated layer to published figure, with Australia and New Zealand on shared solutions rather than duplicated logic.</p>
+              <p>What changed for each group is specific. Clinical Assurance users adjust their own thresholds and categorise cases in bulk instead of queuing report changes with an analyst. Marketing can test alternative churn assumptions and see the effect on retention and customer value immediately. Finance works in Excel against governed daily-refreshed enterprise data instead of manual lookups. People &amp; Culture can report headcount and turnover at any historical point rather than only the latest month-end. State and Country reporting resolves consistently through a governed Region Master.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>The most valuable parts of this work were not the individual visuals; they were the curation logic, the reusable measures and the reconciliation tie-outs that made the numbers trustworthy. Treating data quality as a first-class deliverable (unit tests, tie-outs, audit logging, exception reporting) is what made the rebuild stick.</p>
+              <p>The most valuable parts of this work were not the individual visuals. They were the curation logic, the reusable governed measures and the reconciliation tie-outs that made the numbers trustworthy, and the decision in Clinical Assurance to change the workflow rather than just the report. Building a dashboard that answers a question is straightforward. Building one that lets a business user answer their own next question, and the one after that, is what actually removes the analyst bottleneck.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Healthcare</li>
-                <li><strong>Discipline:</strong> Finance, Assurance and HR or P&amp;C reporting</li>
-                <li><strong>Role:</strong> Analytics Engineer / Power BI Developer / Fabric Developer</li>
+                <li><strong>Client:</strong> Abano Healthcare</li>
+                <li><strong>Scale:</strong> 220+ practices across AU and NZ</li>
+                <li><strong>Domains:</strong> Finance, Marketing, Clinical Assurance, People &amp; Culture</li>
+                <li><strong>Model:</strong> 70-table Gold Direct Lake, 10 tables built independently</li>
+                <li><strong>Measures:</strong> 400+ report-specific measures authored</li>
+                <li><strong>Role:</strong> Analytics Engineer / Power BI Consultant</li>
                 <li><strong>Period:</strong> Sep 2025 to Present</li>
               </ul>
             </div>
             <div class="card">
               <h3>Tools used</h3>
-              <div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">Lakehouse</span><span class="tag">Warehouse</span><span class="tag">Direct Lake</span><span class="tag">Dataflow Gen2</span><span class="tag">Power BI</span><span class="tag">T-SQL</span><span class="tag">Spark notebooks</span><span class="tag">DAX</span><span class="tag">D365 Finance</span><span class="tag">SharePoint Lists</span><span class="tag">Power Apps</span><span class="tag">Azure DevOps</span><span class="tag">Confluence</span></div>
+              <div class="tags"><span class="tag">Microsoft Fabric</span><span class="tag">Lakehouse</span><span class="tag">Warehouse</span><span class="tag">Direct Lake</span><span class="tag">Dataflow Gen2</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">T-SQL</span><span class="tag">Spark notebooks</span><span class="tag">Power Apps</span><span class="tag">Power Automate</span><span class="tag">SharePoint Lists</span><span class="tag">D365</span><span class="tag">PayGlobal</span><span class="tag">Excel</span><span class="tag">Azure DevOps</span><span class="tag">Confluence</span></div>
             </div>
             <div class="card soft">
               <h3>Confidentiality</h3>
