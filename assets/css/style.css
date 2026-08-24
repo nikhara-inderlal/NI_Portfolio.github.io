@@ -303,6 +303,9 @@ main section:first-child { padding-top: 2.5rem; }
 }
 .note strong { color: var(--text); }
 
+/* Evidence notes inside capability cards sit tighter than standalone notes */
+.card .note { margin: 0.9rem 0 0; font-size: 0.88rem; }
+
 .mock-note {
   font-size: 0.82rem;
   color: var(--text-faint);
