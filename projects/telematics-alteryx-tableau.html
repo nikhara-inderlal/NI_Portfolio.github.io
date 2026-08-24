@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/telematics-alteryx-tableau.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Telematics Data Enrichment and Fuel Efficiency Reporting | Nikhara Inderlal">
+  <meta property="og:title" content="Fleet Fuel Efficiency Analytics at Teletrac Navman | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/telematics-alteryx-tableau.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Telematics Data Enrichment and Fuel Efficiency Reporting | Nikhara Inderlal">
+  <meta name="twitter:title" content="Fleet Fuel Efficiency Analytics at Teletrac Navman | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Built an Alteryx ETL workflow and Tableau dashboard to enrich telematics data with vehicle details, fuel consumption benchmarks and dynamic fuel pricing, supporting analysis of fuel wastage, inefficient routes, high-usage vehicles and excessive idling.">
-  <title>Telematics Data Enrichment and Fuel Efficiency Reporting | Nikhara Inderlal</title>
+  <meta name="description" content="Teletrac Navman case study: end-to-end telematics data engineering across a 170+ vehicle fleet, and a Tableau fuel-efficiency solution proposed and built beyond the assigned scope that was selected as joint winner of the internal dashboard challenge.">
+  <title>Fleet Fuel Efficiency Analytics at Teletrac Navman | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,13 +46,13 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Alteryx ETL / Tableau</span>
-        <h1>Telematics Data Enrichment and Fuel Efficiency Reporting</h1>
-        <p class="lead">An Alteryx ETL workflow and Tableau dashboard that enrich raw telematics data with vehicle details, fuel consumption benchmarks and dynamic fuel pricing to surface fuel wastage, inefficient routes and high-usage vehicles.</p>
+        <span class="eyebrow">Telematics &middot; Data engineering and fleet efficiency analytics</span>
+        <h1>Fleet Fuel Efficiency Analytics at Teletrac Navman</h1>
+        <p class="lead">End-to-end telematics data engineering across a 170+ vehicle fleet, and a fuel-efficiency solution I proposed and built outside the scope I was given.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Transport / Fleet operations</span></div>
-          <div><strong>Role</strong><span>Data Analyst / ETL Developer</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
+          <div><strong>Sector</strong><span>Teletrac Navman, a leading ANZ fleet-management provider</span></div>
+          <div><strong>Role</strong><span>Analytics Consultant / Data Engineer / Tableau Developer</span></div>
+          <div><strong>Engagement</strong><span>170+ vehicle fleet</span></div>
           <div><strong>Tools</strong><span>Alteryx, Tableau, Spatial analytics, API integration, Fuel pricing data, Excel</span></div>
         </div>
       </div>
@@ -67,44 +67,44 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>A fleet operation collected raw telematics data across its vehicles, but the records on their own said little about cost or efficiency. Trips, distances and engine events were captured, yet there was no straightforward way to see which vehicles, routes or drivers were burning more fuel than they should, or what that was costing as fuel prices moved.</p>
+              <p>Teletrac Navman is a leading fleet-management provider in Australia and New Zealand. The engagement covered a fleet of more than 170 vehicles, where TN360 was capturing vehicle, event and user data through its APIs. The raw records described what happened: trips, distances, engine events. They said very little about what any of it cost.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>The telematics feed lacked the context needed for decisions: no vehicle reference details, no consumption benchmark to compare against, and no pricing to convert litres into dollars. Without enrichment, the data could not answer practical questions about wastage, inefficient routes, excessive idling or driver-level fuel cost.</p>
+              <p>The telematics feed lacked the context needed for decisions. There were no reliable vehicle reference details, no consumption benchmark to compare actual use against, and no pricing to convert litres into dollars. Without that enrichment the data could not answer the practical questions: which vehicles, routes or drivers are burning more fuel than they should, how much is being wasted, and what is that worth as fuel prices move.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Built an Alteryx ETL workflow to enrich the raw telematics data with vehicle details, fuel consumption benchmarks and dynamic fuel pricing, then shaped a clean reporting-ready dataset for a Tableau dashboard. The enriched model let operations analyse fuel use by vehicle, route and driver rather than reading raw trip logs.</p>
+              <p>I was engaged for the data engineering, and that came first: an end-to-end Alteryx ETL pipeline integrating TN360 vehicle, event and user API data with spreadsheet and external reference data to produce clean, analysis-ready telematics datasets. Incomplete vehicle records were a blocker for any benchmarking, so I enriched them using VIN and registration information to recover the make, model and year attributes that fuel-consumption benchmarking depends on.</p><p>While building that pipeline it became clear the enriched data could answer a question nobody had asked me to answer. I identified the analytical opportunity outside my assigned data-engineering scope, proposed the solution, and built a fully functional Tableau fuel-efficiency dashboard end to end in approximately one day.</p>
             </section>
             <section>
               <h2>Data enrichment &amp; preparation</h2>
-              <p>The Alteryx workflow joined telematics records to a vehicle reference table for make, model and expected consumption, applied fuel consumption benchmarks so actual use could be compared against expectation, and integrated dynamic fuel pricing so litres translated into cost over time. Spatial analytics supported route-level views, and spreadsheet-based enrichment filled gaps in the reference data before the final dataset was produced.</p>
+              <p>The Alteryx workflow joined telematics records to vehicle reference data for make, model and expected consumption, applied fuel-consumption benchmarks so actual use could be measured against expectation, and integrated historical and current Australian fuel-pricing data so litres translated into cost at trip level. Spreadsheet-based enrichment closed the remaining gaps in the reference data before the final dataset was produced.</p>
             </section>
             <section>
               <h2>Fuel pricing &amp; API integration</h2>
-              <p>Dynamic fuel pricing was pulled through an API and aligned to the relevant periods so cost reflected real price movement rather than a flat assumption. Keeping pricing as a managed input meant the same workflow stayed accurate as prices changed, without reworking the model each time.</p>
+              <p>Australian fuel pricing was integrated and aligned to the relevant periods, so cost reflected real price movement rather than a flat assumption. Keeping pricing as a managed input meant the same workflow stayed accurate as prices changed, without reworking the model each time.</p><p>The analytical step that made the difference was developing actual-versus-optimised travel and idling logic. Comparing what a trip did cost against what it should have cost is what converts a fuel figure into an actionable one: it quantifies fuel and monetary loss from inefficient routes, excessive idling and vehicle or driver behaviour, including Saved and Wasted classifications.</p>
             </section>
             <section>
               <h2>Reporting</h2>
-              <p>The Tableau dashboard presented fuel efficiency at fleet, route, vehicle and driver level, highlighting fuel wastage, inefficient routes, high-usage vehicles, excessive idling and driver-level fuel cost patterns. Benchmarks made it clear where actual consumption diverged from expectation rather than just showing totals.</p>
+              <p>The Tableau dashboard covered total and average fuel cost and usage, monthly actual versus optimised trends, vehicle and driver consumption categories, idle-loss analysis and route-efficiency cost comparisons. Vehicle and driver classifications made the comparison fair, so a heavy vehicle on long routes was not flagged simply for consuming more than a light one.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Operations could move from raw telematics logs to a clear view of where fuel was being wasted and what it was costing. Inefficient routes, heavy-usage vehicles and excessive idling became visible and comparable, giving a basis for targeted follow-up rather than broad assumptions.</p>
+              <p>Operations moved from raw telematics logs to a clear view of where fuel was being wasted and what it was costing, with inefficient routes, heavy-usage vehicles and excessive idling visible and comparable rather than inferred.</p><p>I presented the client-ready solution directly to stakeholders without the interim review cycle the other team solutions went through. It received strong final client feedback and was selected as a joint winner of the internal dashboard challenge.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>The value was in the enrichment, not the raw feed. Joining vehicles, benchmarks and live pricing turned an opaque telematics stream into operational answers, and keeping fuel pricing as a managed input meant the workflow stayed useful as conditions changed.</p>
+              <p>The engineering was the assignment; the efficiency analysis was the opportunity. The reason I could see it was that I had been inside the data long enough to know what it could support, which is an argument for analytics engineers staying close to the business question rather than stopping at a clean dataset. Keeping fuel pricing as a managed input was the other decision that mattered, because it meant the solution stayed useful after handover instead of aging out with the price data.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Transport / Fleet operations</li>
+                <li><strong>Sector:</strong> Teletrac Navman, fleet telematics</li>
                 <li><strong>Discipline:</strong> Alteryx ETL / Tableau</li>
-                <li><strong>Role:</strong> Data Analyst / ETL Developer</li>
+                <li><strong>Role:</strong> Analytics Consultant / Data Engineer / Tableau Developer</li>
               </ul>
             </div>
             <div class="card">

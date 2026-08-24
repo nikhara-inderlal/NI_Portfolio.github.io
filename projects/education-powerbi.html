@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/education-powerbi.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Education Analytics: Student Progress & Effort Reporting | Nikhara Inderlal">
+  <meta property="og:title" content="Student Progress &amp; Effort Analytics at Fintona Girls' School | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/education-powerbi.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Education Analytics: Student Progress & Effort Reporting | Nikhara Inderlal">
+  <meta name="twitter:title" content="Student Progress &amp; Effort Analytics at Fintona Girls' School | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Created a Power BI reporting solution to help a private school track student progress using a fairer effort score based on each student's historical baseline, with walkthroughs for teachers and the principal.">
-  <title>Education Analytics: Student Progress & Effort Reporting | Nikhara Inderlal</title>
+  <meta name="description" content="Fintona Girls' School case study: designing a fair measure of student improvement across 20+ years of assessment history, using a linear weighting model that compares each student against their own trajectory rather than against peers.">
+  <title>Student Progress &amp; Effort Analytics at Fintona Girls' School | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,14 +46,14 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Power BI / Analytics Design</span>
-        <h1>Education Analytics: Student Progress & Effort Reporting</h1>
-        <p class="lead">Power BI reporting for a private school using a baseline-aware effort score, with walkthroughs for teachers and the principal.</p>
+        <span class="eyebrow">Education &middot; Metric design and analytical reasoning</span>
+        <h1>Student Progress &amp; Effort Analytics at Fintona Girls' School</h1>
+        <p class="lead">Twenty years of assessment history, and a measurement problem: how do you recognise genuine improvement when the difficulty of the work rises every year?</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Education</span></div>
-          <div><strong>Role</strong><span>Data Analyst</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Power BI, Power Query, DAX, Semantic model</span></div>
+          <div><strong>Sector</strong><span>Fintona Girls' School, a leading independent girls' school in Melbourne</span></div>
+          <div><strong>Role</strong><span>Analytics Consultant / Power BI Developer</span></div>
+          <div><strong>Engagement</strong><span>20+ years of assessment history, 2005 to 2025</span></div>
+          <div><strong>Tools</strong><span>Power BI, Power Query, DAX, Mathematical modelling</span></div>
         </div>
       </div>
     </section>
@@ -67,44 +67,44 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>A private school wanted to track student progress and effort over time. The existing simple averaging approach unfairly penalised students who had always performed at the top of the range, and unfairly rewarded students whose baseline was low. The principal wanted a fairer metric.</p>
+              <p>Fintona Girls' School holds more than twenty years of assessment history, from 2005 to 2025. The school wanted to track student progress and effort over time, but the existing approach relied on simple averaging, which unfairly penalised students who had always performed at the top of the range and unfairly rewarded students whose baseline was low. The principal wanted a fairer metric.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>A single average mark hides effort. Students consistently performing at the top of the range looked the same year-on-year even when they were extending themselves, and students with lower baselines could appear weak even when their own trajectory was strong.</p>
+              <p>A single average mark hides effort, and the obvious alternatives are worse. Comparing a student against their year-group mean measures the cohort, not the student. Comparing raw marks across years ignores that year-level difficulty rises, so a student holding a steady mark while the work gets harder is actually improving and looks static.</p><p>This matters because the metric was going to be used in conversations with teachers and parents. A measure that cannot be explained, or that visibly rewards the wrong students, gets dismissed regardless of how defensible it is mathematically.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Designed a baseline-aware effort score in DAX that compared each student's current term to their own historical performance, not to a year-group mean. Built a Power BI reporting page per year group plus a per-student deep-dive, and walked teachers and the principal through it for sign-off.</p>
+              <p>I treated this as a metric-design problem rather than a reporting problem. I applied mathematical and statistical reasoning to develop a custom Effort Score comparing current performance against each student's own historical baseline, adjusted for year-level difficulty, then developed a linear weighting model to improve comparability between grades of differing difficulty.</p><p>The design decision that mattered most was making the methodology recognise both genuine improvement and sustained high performance. A model that only rewards change punishes the student who was already excellent and stayed there.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>dim_student, dim_year_group, dim_subject, dim_term, fact_assessment. DAX measures for current-term mean, baseline mean (excluding current term), effort score (delta vs baseline normalised by standard deviation), and trend.</p>
+              <p>Restructured multi-year, multi-subject assessment data into a clean Student by Subject by Term analytical model using Power Query merges, grouping, transformations and calculated logic. Built an interactive single-student Power BI report carrying year level, subject count, average effort and overall mark change, plus a detailed subject matrix of mark, historical average, weighted difference, percentage change and effort.</p><p>Longitudinal views across years and semesters let teachers analyse performance and effort over time rather than relying on peer comparison at a single point.</p>
             </section>
             <section>
               <h2>Validation</h2>
-              <p>Walked the principal through a sample of high-baseline and low-baseline students to confirm the metric matched what teachers actually felt was going on. Adjusted normalisation parameters until the score matched professional judgement.</p>
+              <p>The test of a metric like this is not whether it computes. It is whether the students it flags are the students teachers already sense are extending themselves. I presented the analytical methodology alongside the reporting solution so the weighting logic and its limitations were visible and open to challenge, rather than arriving as a black-box score.</p>
             </section>
             <section>
               <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Walkthroughs with teachers and the principal, plus a short written explanation of how the effort score was calculated and its limitations, so the metric could be defended to parents and used consistently across staff.</p>
+              <p>Presented the analytical methodology and the completed reporting solution through stakeholder review and sign-off, so the approach was understood and accepted by the people who would have to defend it in conversations with staff and parents.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Teachers now have an objective effort metric that doesn't penalise consistently strong students. Conversations with parents are easier because the score is explainable and defensible. The principal reviews trends across year groups without sifting through spreadsheets.</p>
+              <p>The school gained a progress measure that compares each student against their own trajectory rather than against their peers, and that recognises sustained high performance as well as improvement. Because the methodology was explained rather than delivered as a number, it can be defended in the conversations it was built for.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>Designing a metric is a stakeholder conversation, not a maths exercise. The normalisation parameters had to match what teachers already sensed about their students, otherwise the metric would have been dismissed regardless of how mathematically tidy it was.</p>
+              <p>Designing a metric is a stakeholder conversation, not a maths exercise. The mathematics decides whether the measure is sound; the conversation decides whether anyone uses it. This is the project I would point to as evidence that a statistics background is worth something beyond the model itself, because the hard part was defining fairness precisely enough to compute it.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Education</li>
+                <li><strong>Sector:</strong> Fintona Girls' School, independent education</li>
                 <li><strong>Discipline:</strong> Power BI / Analytics Design</li>
-                <li><strong>Role:</strong> Data Analyst</li>
+                <li><strong>Role:</strong> Analytics Consultant / Power BI Developer</li>
               </ul>
             </div>
             <div class="card">

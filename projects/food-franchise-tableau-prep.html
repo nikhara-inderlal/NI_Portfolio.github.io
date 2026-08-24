@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/food-franchise-tableau-prep.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Food & Beverage Franchise Store Reporting Pack | Nikhara Inderlal">
+  <meta property="og:title" content="Franchise Sales &amp; Basket Analytics at Oakberry | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/food-franchise-tableau-prep.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Food & Beverage Franchise Store Reporting Pack | Nikhara Inderlal">
+  <meta name="twitter:title" content="Franchise Sales &amp; Basket Analytics at Oakberry | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Prepared and standardised sales data from 38 Excel files, then built printable Tableau dashboards for store-level monthly reporting, including KPIs, product analysis, topping analysis and year-on-year trends.">
-  <title>Food & Beverage Franchise Store Reporting Pack | Nikhara Inderlal</title>
+  <meta name="description" content="Oakberry case study: making monthly franchise reporting scalable across 40+ locations from 38 Excel files, and introducing the client's first visibility into basket and product-affinity behaviour through five Spanish-language Tableau dashboards.">
+  <title>Franchise Sales &amp; Basket Analytics at Oakberry | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,14 +46,14 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Tableau Prep / Tableau</span>
-        <h1>Food & Beverage Franchise Store Reporting Pack</h1>
-        <p class="lead">Printable Tableau dashboards for monthly store reporting from 38 standardised Excel files.</p>
+        <span class="eyebrow">QSR and franchise &middot; Automation and consumer behaviour analytics</span>
+        <h1>Franchise Sales &amp; Basket Analytics at Oakberry</h1>
+        <p class="lead">Making monthly franchise reporting scalable across 40+ locations, then using the clean data to give the client its first view of what customers actually buy together.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Food & Beverage Franchise</span></div>
-          <div><strong>Role</strong><span>Data Analyst</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Tableau Prep, Tableau, Excel VBA, Hyper files</span></div>
+          <div><strong>Sector</strong><span>Oakberry, a global QSR brand with 600+ stores across 35+ countries</span></div>
+          <div><strong>Role</strong><span>Analytics Consultant / Tableau Developer</span></div>
+          <div><strong>Engagement</strong><span>Mexican operation, 40+ franchise locations</span></div>
+          <div><strong>Tools</strong><span>Tableau Prep, Tableau, Excel VBA, Hyper, LOD expressions, Parameters</span></div>
         </div>
       </div>
     </section>
@@ -67,44 +67,44 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>A franchise group needed a monthly store reporting pack covering 38 stores. Each store submitted sales data in its own Excel file with inconsistent column names, sheet structures and date formats. The team wanted a single printable pack per store.</p>
+              <p>Oakberry is a global brand with more than 600 stores across 35+ countries. This engagement supported the Mexican operation across more than 40 franchise locations, working with Spanish-language source data. Monthly reporting was assembled from 38 separate Excel source files.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>Each store's Excel file was structured differently, so producing a standard monthly pack required manual rework each month. The franchise team could not benchmark stores against each other on a consistent basis.</p>
+              <p>Two problems sat on top of each other. The obvious one was that rebuilding reporting from 38 differently-shaped Excel files every month did not scale and could not support consistent comparison between locations.</p><p>The less obvious one was what that manual process was preventing. Because every month was consumed by assembling the data, nobody was analysing what it contained. The franchise had no visibility into basket behaviour: which toppings went with which products, how often, and what that was worth.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>The 38 source files stacked products and toppings together in rows, so an Excel VBA script generated row IDs to map each product to its toppings, and a wildcard union in Tableau Prep combined the files into one clean dataset. Built printable Tableau dashboards parameterised by store so the same template generated one pack per store every month, with LOD calculations keeping franchise-wide benchmarks correct even when filtered to one store, and Hyper extracts for fast month-end reload.</p>
+              <p>I led the data preparation in Tableau Prep, cleaning, pivoting and aggregating sales data from the 38 Excel files. The structural blocker was that products and toppings were stacked across rows in a single field, which makes reliable product-to-topping mapping impossible. I developed an Excel VBA row-ID solution to correctly map products to toppings, which is what unlocked downstream basket and combination analysis.</p><p>I then implemented wildcard unioning in Tableau Prep so future store files are integrated automatically, and output clean Hyper extracts for recurring monthly reporting. That turned a monthly rebuild into a repeatable ingestion process.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>One long-format fact table with store, product, topping, date and amount. Parameters for store and reporting period. LOD calculations for franchise-mean and topping-rank benchmarks. Hyper extract for fast reload at month-end.</p>
+              <p>One long-format fact structure covering store, product, topping, date and amount, with parameters for store and reporting period and LOD expressions so franchise-wide benchmarks stay correct when the view is filtered to a single location. Hyper extracts kept month-end reload fast.</p>
             </section>
             <section>
               <h2>Validation</h2>
-              <p>Spot-checked five randomly chosen stores against their own raw Excel totals, confirmed YoY calculations against the prior-year archive, and asked the franchise operations lead to review three packs before bulk generation.</p>
+              <p>Checked prepared store totals back against their own raw Excel source figures and confirmed year-on-year calculations against the prior-year data before the dashboards were built on top, since a mapping error in the row-ID logic would have propagated silently into every basket figure.</p>
             </section>
             <section>
               <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Operations team trained on the month-end refresh: drop the 38 source files into a known folder, run the prep flow, the parameterised pack regenerates per store. Handover included a written runbook so the process didn't depend on any one person.</p>
+              <p>Built five dynamic Tableau dashboards optimised for PDF distribution and delivered the reporting experience in Spanish for the Mexican business, working with Spanish-language source data throughout, and secured stakeholder sign-off.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Each store now receives a consistent, printable monthly pack with the same KPIs, the same product and topping analysis, and the same YoY context. The franchise operations team can compare stores using the same yardstick.</p>
+              <p>Monthly franchise reporting became repeatable across 40+ locations, with new store files integrating automatically rather than requiring rework. The dashboards covered month-on-month and year-on-year KPIs, product and category performance, delivery versus in-store behaviour, peak days and times and revenue trends.</p><p>The more valuable outcome was analytical rather than operational. The work introduced the client's first basket-analysis capability, surfacing previously unavailable insight into topping combinations, topping penetration, average toppings by product type and customer product affinity. Automation made the reporting sustainable; the row-ID mapping made a new class of question answerable at all.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>The prep flow was the real deliverable. Once 38 messy source files reliably became one clean dataset, the dashboard itself was the easy part, and the runbook meant the franchise team could keep using it after handover.</p>
+              <p>The prep flow was the real deliverable, but not only because it saved effort. Solving the stacked product and topping structure was what made basket analysis possible, so a data-preparation decision turned into the client gaining a capability they did not previously have. That is usually where the value in this kind of work sits.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Food & Beverage Franchise</li>
+                <li><strong>Sector:</strong> Oakberry, global QSR and franchise</li>
                 <li><strong>Discipline:</strong> Tableau Prep / Tableau</li>
-                <li><strong>Role:</strong> Data Analyst</li>
+                <li><strong>Role:</strong> Analytics Consultant / Tableau Developer</li>
               </ul>
             </div>
             <div class="card">

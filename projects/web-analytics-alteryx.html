@@ -99,7 +99,7 @@
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>The biggest lift came from treating GA4&rsquo;s nested schema as a modelling problem rather than a query-time inconvenience. DDL-defined combined schemas with parameter unnesting once, upstream, made everything downstream, including Alteryx curation, audit logging and variance views, cleaner and more durable.</p>
+              <p>The biggest lift came from treating GA4&rsquo;s nested schema as a modelling problem rather than a query-time inconvenience. Solving it once, upstream, with DDL-defined combined schemas and parameter unnesting made everything downstream cleaner and more durable.</p><p>The distinction I would draw is between an extract and a foundation. An extract answers today&rsquo;s question and is thrown away. A foundation is defined once, refreshes on a schedule, tells you when it is stale or broken, and answers questions nobody had asked when it was built. Every technical decision here, the conformed schema, the service-account access, the audit and key-integrity controls, was chosen for repeatability and maintainability rather than for the first report it enabled.</p>
             </section>
           </article>
           <aside class="case-sidebar">

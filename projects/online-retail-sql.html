@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/online-retail-sql.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Online Retail SQL Audit & Event-Driven Analytics Pipeline | Nikhara Inderlal">
+  <meta property="og:title" content="Database Integrity &amp; Order Validation | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/online-retail-sql.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Online Retail SQL Audit & Event-Driven Analytics Pipeline | Nikhara Inderlal">
+  <meta name="twitter:title" content="Database Integrity &amp; Order Validation | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Designed SQL-based logic to monitor order status, fulfilment progression and financial consistency, including triggers, alerts and an audit log for exception tracking.">
-  <title>Online Retail SQL Audit & Event-Driven Analytics Pipeline | Nikhara Inderlal</title>
+  <meta name="description" content="Technical simulation: PostgreSQL database engineering in a simulated e-commerce environment, shifting order and fulfilment data quality from reactive cleansing to preventative enforcement using business rules, constraints, PL/pgSQL functions, event-driven triggers and a central audit log.">
+  <title>Database Integrity &amp; Order Validation | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,14 +46,14 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">SQL / Data Quality</span>
-        <h1>Online Retail SQL Audit & Event-Driven Analytics Pipeline</h1>
-        <p class="lead">SQL-based logic for order status, fulfilment progression, financial consistency, triggers, alerts and an audit log.</p>
+        <span class="eyebrow">Technical simulation &middot; Database engineering and data quality</span>
+        <h1>Database Integrity &amp; Order Validation</h1>
+        <p class="lead">Hands-on PostgreSQL database engineering in a simulated e-commerce environment, moving data quality from reactive cleansing to enforcement at source.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Online Retail</span></div>
-          <div><strong>Role</strong><span>Data Analyst / SQL Data Engineering</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>PostgreSQL, SQL Server, T-SQL, DBeaver, Triggers, Audit logs</span></div>
+          <div><strong>Sector</strong><span>Technical simulation, not a commercial client engagement</span></div>
+          <div><strong>Role</strong><span>SQL Developer / PostgreSQL / PL-pgSQL</span></div>
+          <div><strong>Engagement</strong><span>Simulated e-commerce environment</span></div>
+          <div><strong>Tools</strong><span>PostgreSQL, PL/pgSQL, DDL, Triggers, Audit logging, DBeaver</span></div>
         </div>
       </div>
     </section>
@@ -67,45 +67,44 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>An online retail platform had recurring data-integrity issues: orders changing state in unexpected ways, fulfilment events arriving out of order, and silent inconsistencies between the order header and line totals. Operations needed visibility into these without rebuilding the source system.</p>
+              <p>This is a technical simulation rather than a client engagement, built to work through a real database-engineering problem end to end in a simulated e-commerce environment. It is included here because the reasoning is the same as production work: analysing an existing schema, finding where integrity actually breaks, and deciding whether to detect problems or prevent them.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>Issues were being reported piecemeal by support and finance, with no central record. The same kind of inconsistency surfaced repeatedly, and no one could quantify whether it was getting better or worse.</p>
+              <p>The scenario is a familiar one. Orders change state in unexpected ways, fulfilment events arrive out of order, and the order header quietly disagrees with the sum of its line items. The usual response is downstream cleansing, which treats the symptom forever and never removes the cause.</p><p>The question I wanted to answer was whether the same class of problem could be pushed back to the point of entry, so invalid transactions are refused rather than detected later.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Wrote a SQL-based exception layer that watched the relevant tables and surfaced any business-rule violation as an explicit, named exception. Used triggers to capture every state transition into an append-only audit log, then layered a small set of reports on top of that log. Worked in PostgreSQL using DBeaver, with SQL functions, triggers and business-rule validation logic.</p>
-              <p>Claude AI was used as a technical support tool to accelerate SQL logic development and troubleshooting. Final logic was reviewed, tested and validated before being treated as the project output.</p>
+              <p>Analysed the PostgreSQL schema, table relationships, dependencies and order-processing logic to identify where data-quality and integrity risks arise across orders, line items, financial values and fulfilment status. Defined and implemented business rules, validation checks and database constraints covering minimum required fields, dependent attributes and valid status progression.</p><p>Developed PL/pgSQL functions to keep fulfilment and delivery status aligned with the true progression of each order, then built event-driven triggers and alert logic to detect and prevent invalid transactions at source. That is the deliberate shift in this piece of work: from reactive cleansing toward preventative data-quality enforcement.</p><p>Claude AI was used as a technical support tool to accelerate SQL logic development and troubleshooting. Final logic was reviewed, tested and validated before being treated as the project output.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Audit table per source entity with the original row image, the changed row image, the rule that fired, a severity label and a timestamp. A summary view per rule made trend analysis straightforward without re-running heavy joins.</p>
+              <p>Created a central audit-log table capturing trigger events, alert type, severity and descriptions, giving full traceability of database-level validation activity. Naming each rule and assigning it a severity is what turns raw trigger output into something prioritised rather than noisy.</p>
             </section>
             <section>
               <h2>Validation</h2>
-              <p>Reproduced known historical incidents from the past 90 days using replay scripts and confirmed each one now appeared in the audit layer with the correct rule firing. Reviewed false-positive rate with the operations team before enabling notifications.</p>
+              <p>Tested each business rule against transactions designed to violate it, confirming the constraint or trigger fired with the correct rule and severity recorded in the audit log, and that valid status progressions were unaffected.</p>
             </section>
             <section>
               <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Operations onboarded by sitting through a daily-summary review for the first week. Documentation handed over included the rule list, severity definitions, the audit table schema and the alert-routing rules so the team could tune thresholds themselves.</p>
+              <p>Presented a structured technical walkthrough covering the schema analysis, identified issues, remediation, business rules, triggers, alerts and audit design, and secured stakeholder sign-off on the approach.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Operations now receives a single daily summary of exceptions instead of investigating one-off reports of 'something looks wrong'. The audit log gives an evidence trail when defending refunds or stock adjustments.</p>
+              <p>Invalid transactions are prevented at source rather than corrected downstream, and the audit log provides a complete traceable record of validation activity for analysis of how often each rule fires and why.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>Naming each rule and giving it a severity made the difference. The same logic without those labels would have produced noise; with them it produced an actionable, prioritised feed the operations team could trust.</p>
+              <p>The interesting decision was where to put the logic. Detection in the reporting layer is easier to build and permanently insufficient, because the bad data still exists and everything downstream inherits it. Pushing enforcement into constraints and triggers is more work up front and is what actually removes the problem, which is the same argument I make for handling data quality in the curation layer rather than in report-level fixes.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Online Retail</li>
-                <li><strong>Discipline:</strong> SQL / Data Quality</li>
-                <li><strong>Role:</strong> Data Analyst / SQL Data Engineering</li>
+                <li><strong>Sector:</strong> Technical simulation, not a commercial client</li>
+                <li><strong>Discipline:</strong> Database engineering and data quality</li>
+                <li><strong>Role:</strong> SQL Developer / PostgreSQL / PL-pgSQL</li>
               </ul>
             </div>
             <div class="card">

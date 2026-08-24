@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/food-manufacturing-tableau.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Food Manufacturing & Distribution Performance Dashboard | Nikhara Inderlal">
+  <meta property="og:title" content="Manufacturing Cost Analytics &amp; Forecasting at Mauri | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/food-manufacturing-tableau.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Food Manufacturing & Distribution Performance Dashboard | Nikhara Inderlal">
+  <meta name="twitter:title" content="Manufacturing Cost Analytics &amp; Forecasting at Mauri | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Built a Tableau dashboard to help operational stakeholders review site-level expense and forecast performance, including MTD/YTD metrics, actuals versus forecast and $/tonne analysis.">
-  <title>Food Manufacturing & Distribution Performance Dashboard | Nikhara Inderlal</title>
+  <meta name="description" content="Mauri case study: an end-to-end Tableau cost and forecast solution letting site managers move from site performance to EBIT to cost category to individual expense, with 3+9 forecast logic across 12 business periods and $/tonne efficiency analysis.">
+  <title>Manufacturing Cost Analytics &amp; Forecasting at Mauri | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,14 +46,14 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Tableau Dashboard</span>
-        <h1>Food Manufacturing & Distribution Performance Dashboard</h1>
-        <p class="lead">Site-level expense and forecast performance with MTD/YTD metrics, actuals vs forecast and $/tonne analysis.</p>
+        <span class="eyebrow">Food manufacturing and FMCG &middot; Cost variance and forecasting</span>
+        <h1>Manufacturing Cost Analytics &amp; Forecasting at Mauri</h1>
+        <p class="lead">Giving site managers a way to find where cost variance was occurring and investigate what was driving it, rather than presenting them with the variance and leaving them there.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Food Manufacturing</span></div>
-          <div><strong>Role</strong><span>Data Analyst</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
-          <div><strong>Tools</strong><span>Tableau, Alteryx, Calculated fields, KPI design</span></div>
+          <div><strong>Sector</strong><span>Mauri, a George Weston Foods division; GWF is one of Australia and New Zealand&rsquo;s largest food manufacturers</span></div>
+          <div><strong>Role</strong><span>Reporting Analyst / Tableau Developer</span></div>
+          <div><strong>Engagement</strong><span>Manufacturing and distribution operations, 12 business periods</span></div>
+          <div><strong>Tools</strong><span>Tableau, Alteryx, Excel</span></div>
         </div>
       </div>
     </section>
@@ -67,44 +67,44 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>Operations leaders across multiple manufacturing and distribution sites needed a single weekly view of expense performance against forecast, with the ability to drill into specific cost categories and compare site efficiency on a normalised $/tonne basis.</p>
+              <p>Mauri is a division of George Weston Foods, one of the largest food manufacturers in Australia and New Zealand. Operational leaders across manufacturing and distribution sites needed to monitor and forecast expenses across cost categories including Labour, Utilities, Occupancy, Repairs and Maintenance and Depreciation.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>Site managers were each interpreting their own numbers differently and weekly variance reviews were spent reconciling figures rather than discussing causes. Leadership had no consistent benchmark to compare site efficiency.</p>
+              <p>Knowing that a site is over forecast is not actionable on its own. The useful question is which cost category, and then which specific expense, is driving it. Without a path from the headline number down to the underlying detail, variance reviews are spent establishing what happened rather than discussing why, and there is no consistent basis for comparing efficiency between sites of different sizes.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Used Alteryx to consolidate forecast, actuals and tonnage extracts from multiple source systems, normalise category labels, and produce a clean reporting-ready dataset. Built the Tableau dashboard around a small set of clear executive KPIs with consistent variance treatment.</p>
+              <p>I designed and delivered the original end-to-end Tableau structure for monitoring and forecasting expenses across manufacturing and distribution. The organising principle was a single navigable path: site performance, then EBIT mapping, then cost category, then individual expense detail, so a manager can start at the headline and arrive at the cause without leaving the report.</p><p>Separate MTD and YTD Actual versus Forecast views carry that hierarchy, supported by dynamic tooltips and conditional colour changes on the Actual bars. I used bullet-chart style comparison with Forecast as the reference marker, which shows overspend and underspend compactly without needing separate variance columns.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Calculated fields for MTD/YTD variance, $/tonne, and forecast-attainment percentage. Reusable parameters for time period and site, with LOD calculations to keep site benchmarks correct under filter changes.</p>
+              <p>Used Alteryx for data cleaning, type standardisation and preparation before Tableau modelling. Integrated 3+9 multi-version forecast logic across 12 business periods, so scenario-based projections can be compared against actual expenditure at multiple levels of detail.</p><p>I also personally introduced $/tonne cost-efficiency analysis for manufacturing and distribution, including MTD and running-total Actual versus Forecast trends. Normalising cost by volume is what makes site comparison fair, since a larger site spending more is not the same as a less efficient one.</p>
             </section>
             <section>
               <h2>Validation</h2>
-              <p>Variance reconciliation against finance's manual workbook for two reporting periods, edge-case checks on negative actuals and zero-tonne sites, and a walkthrough with the operations lead before publishing.</p>
+              <p>Checked the prepared cost and forecast data through the Alteryx preparation stage and documented all measures so the calculation behind each figure was traceable, which matters when a site manager challenges a variance that reflects on their operation.</p>
             </section>
             <section>
               <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Live walkthroughs with site managers and the operations lead, with a short follow-up Q&amp;A session a week later to capture refinements. Dashboard published with a one-page interpretation guide so new viewers could read it without a verbal handover.</p>
+              <p>Presented the completed solution and achieved stakeholder sign-off, and delivered a fully recorded walkthrough with usage guidance and analytical insights so the solution remained maintainable and usable independently after handover.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Site managers can now review their own performance and benchmark against peer sites in one place. The weekly variance review is shorter and the conversation moves faster from 'what happened' to 'why' and 'what we will do about it'.</p>
+              <p>Site managers can move from site performance through EBIT to cost category to individual expense in one place, with MTD and YTD actual versus forecast, $/tonne efficiency and forecast-scenario comparison available at each level.</p><p>The change is in what the reporting supports. Rather than distributing variance figures and leaving interpretation to each site, it gives managers a route to the driver behind the number, which is the difference between a report that reports and one that gets used to investigate.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>Restraint on KPI count was the call that mattered most. The initial brief asked for a long list of metrics; agreeing on a smaller, sharper set made the dashboard more useful and the weekly conversation more productive.</p>
+              <p>Restraint on KPI count was the call that mattered most. The initial brief asked for a long list of metrics, and agreeing on a smaller, sharper set made the drill path legible. The $/tonne analysis is the piece I am most satisfied with, because it was not asked for and it is what made cross-site comparison defensible.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Food Manufacturing</li>
+                <li><strong>Sector:</strong> Mauri, food manufacturing and FMCG</li>
                 <li><strong>Discipline:</strong> Tableau Dashboard</li>
-                <li><strong>Role:</strong> Data Analyst</li>
+                <li><strong>Role:</strong> Reporting Analyst / Tableau Developer</li>
               </ul>
             </div>
             <div class="card">

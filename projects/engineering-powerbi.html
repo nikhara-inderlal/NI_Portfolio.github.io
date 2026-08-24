@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/engineering-powerbi.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Engineering Services Opportunity Tracking Dashboard | Nikhara Inderlal">
+  <meta property="og:title" content="Tender &amp; Opportunity Analytics at UGL | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/engineering-powerbi.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Engineering Services Opportunity Tracking Dashboard | Nikhara Inderlal">
+  <meta name="twitter:title" content="Tender &amp; Opportunity Analytics at UGL | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Created a Power BI dashboard to help stakeholders analyse business opportunities, tender performance and historical win-rate patterns using transformed opportunity data and DAX-driven executive metrics.">
-  <title>Engineering Services Opportunity Tracking Dashboard | Nikhara Inderlal</title>
+  <meta name="description" content="UGL case study: helping executives prioritise tender opportunities using historical win rates, contract-value classification and benchmark-based estimation logic for opportunities without direct historical precedent.">
+  <title>Tender &amp; Opportunity Analytics at UGL | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,13 +46,13 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Power BI Dashboard</span>
-        <h1>Engineering Services Opportunity Tracking Dashboard</h1>
-        <p class="lead">Executive dashboard for business opportunities, tender performance and historical win-rate analysis.</p>
+        <span class="eyebrow">Engineering and infrastructure &middot; Commercial decision support</span>
+        <h1>Tender &amp; Opportunity Analytics at UGL</h1>
+        <p class="lead">Helping executives decide which tenders are worth pursuing, using evidence rather than recollection.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Engineering Services</span></div>
-          <div><strong>Role</strong><span>Data Analyst / Power BI Developer</span></div>
-          <div><strong>Engagement</strong><span>Project engagement</span></div>
+          <div><strong>Sector</strong><span>UGL, a specialist end-to-end engineering and services provider and market leader in multiple sectors</span></div>
+          <div><strong>Role</strong><span>Analytics Consultant / Power BI Developer</span></div>
+          <div><strong>Engagement</strong><span>Executive opportunity and tender analytics</span></div>
           <div><strong>Tools</strong><span>Power BI, Power Query, DAX, Data modelling</span></div>
         </div>
       </div>
@@ -67,44 +67,44 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>Sales leadership had detailed opportunity records in their CRM but no single view of pipeline health, win-rate trend, or how performance differed by sector and opportunity size. Decisions about resource allocation were anecdotal.</p>
+              <p>UGL is a specialist end-to-end engineering and services provider and a market leader across several sectors. Leadership held detailed opportunity and tender records but had no consolidated view of pipeline health, win-rate performance or how results differed by business unit, region and opportunity size.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>Leadership couldn't see win-rate trends or sector-level performance without commissioning a custom analysis each time. Pursuit decisions relied on memory and gut rather than evidence.</p>
+              <p>Pursuit decisions consume real resource. Bidding is expensive, and choosing which opportunities to chase was relying on recollection rather than evidence, because getting the analysis meant commissioning it each time.</p><p>The harder analytical problem sat underneath. Historical win rates only help for opportunity types with history. For a new client, sector or contract size, there is no direct precedent, which is exactly where a prioritisation decision is hardest and where a naive model quietly returns nothing useful.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Modelled opportunity data into clean fact and dimension tables in Power BI, with date intelligence on opportunity creation and close dates, and built a single executive page plus drilldown pages for sector, stage and value-band analysis.</p>
+              <p>I built an executive Power BI solution for active opportunity and tender analysis covering expected contract-value exposure, pipeline stages and historical win performance across business units and regions. I developed a tender classification framework and calculated historical win rates across grouped opportunity data, so performance could be read by opportunity type rather than only in aggregate.</p><p>To address opportunities without direct historical records, I designed benchmark-based estimation logic using comparable clients, industries and business groupings. That extends win-rate coverage to the opportunities that would otherwise fall outside the analysis, which is the part that makes the tool usable for prioritisation rather than just reporting.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Star schema with dim_date, dim_sector, dim_stage, fact_opportunity, built from raw opportunity data using Power Query grouping and merging and opportunity classification. DAX measures for win rate (closed-won / closed-total), pipeline value, conversion ratios by stage, and rolling 12-month win-rate trend with sector breakdown. A matrix table presented stage-by-sector conversion, a last-refresh timestamp showed data recency, and benchmarking logic compared current opportunities against historical win-rate patterns to support pursuit prioritisation.</p>
+              <p>Used Power Query extensively for cleaning, deduplication, grouping, merging and aggregation to create a reliable opportunity dataset from raw records. Built DAX-driven executive KPIs with hierarchical tracking by business unit, sub-unit, region and stage, filtering by source and tender dates, and a dynamic last-refresh indicator so viewers can see data recency.</p>
             </section>
             <section>
               <h2>Validation</h2>
-              <p>Reconciled total opportunity counts and values against the CRM's own native reports. Reviewed win-rate definitions with sales leadership to make sure 'closed-lost-no-decision' was being treated consistently across the analysis.</p>
+              <p>Reviewed the win-rate definition and the tender classification framework with stakeholders before the analysis was built on top of them, since a metric like win rate is only as defensible as the agreement on what counts as a win.</p>
             </section>
             <section>
               <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Walked sales leadership through the executive page and the drilldown structure. Documented the win-rate definition, the data refresh cadence and the CRM-stage mapping so the analysis remained defensible after handover.</p>
+              <p>Presented the methodology, assumptions and dashboard to client stakeholders and secured final sign-off. Presenting the assumptions alongside the output mattered here: an estimation model used to prioritise commercial decisions has to be understood by the people acting on it.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Leadership reviews pipeline weekly using one dashboard. Conversations about pursuit decisions now reference the same numbers and the same definitions, and the team can spot win-rate shifts by sector before they show up in revenue.</p>
+              <p>Executives can prioritise tender opportunities using evidence-based commercial analysis, with historical win rates, contract-value exposure and benchmark-derived estimates for opportunities without direct history, all readable down through business unit, region and stage.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>Agreeing the win-rate definition up front saved rework later. It was a small conversation that prevented every future pipeline review from re-litigating the same question.</p>
+              <p>The Power BI development was the smaller half of this project. The useful work was the commercial reasoning: deciding what a comparable client actually is, and how far a benchmark can be stretched before it stops being evidence. Agreeing the win-rate definition up front prevented every future pipeline review from re-litigating the same question.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Engineering Services</li>
+                <li><strong>Sector:</strong> UGL, engineering and infrastructure services</li>
                 <li><strong>Discipline:</strong> Power BI Dashboard</li>
-                <li><strong>Role:</strong> Data Analyst / Power BI Developer</li>
+                <li><strong>Role:</strong> Analytics Consultant / Power BI Developer</li>
               </ul>
             </div>
             <div class="card">
