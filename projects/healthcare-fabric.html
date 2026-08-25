@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/healthcare-fabric.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Enterprise Healthcare Analytics at Abano | Nikhara Inderlal">
+  <meta property="og:title" content="Enterprise Healthcare Analytics | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/healthcare-fabric.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Enterprise Healthcare Analytics at Abano | Nikhara Inderlal">
+  <meta name="twitter:title" content="Enterprise Healthcare Analytics | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Abano Healthcare enterprise analytics case study: a governed 70-table Direct Lake model across Finance, Marketing, Clinical Assurance and People and Culture, self-service exception reporting with an embedded Power App, a flexible CLTV and churn framework, governed Excel finance reporting and an adopted Region Master.">
-  <title>Enterprise Healthcare Analytics at Abano | Nikhara Inderlal</title>
+  <meta name="description" content="Large Australasian healthcare organisation analytics case study: a governed 70-table Direct Lake model across Finance, Marketing, Clinical Assurance and People and Culture, self-service exception reporting with an embedded Power App, a flexible CLTV and churn framework, governed Excel finance reporting and an adopted governed master location mapping.">
+  <title>Enterprise Healthcare Analytics | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -47,10 +47,10 @@
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
         <span class="eyebrow">Enterprise analytics · Finance, Marketing, Clinical Assurance and People &amp; Culture</span>
-        <h1>Enterprise Healthcare Analytics at Abano</h1>
-        <p class="lead">A year inside a governed Microsoft Fabric estate serving 220+ dental practices across Australia and New Zealand, working across four business domains from SME requirements through modelling, validation and production release.</p>
+        <h1>Enterprise Healthcare Analytics</h1>
+        <p class="lead">A year inside a governed Microsoft Fabric estate serving 200+ sites across Australia and New Zealand, working across four business domains from SME requirements through modelling, validation and production release.</p>
         <div class="case-meta">
-          <div><strong>Client</strong><span>Abano Healthcare, Australasia's largest dental support organisation, 220+ practices across AU and NZ</span></div>
+          <div><strong>Client</strong><span>Large Australasian Healthcare Organisation, 200+ sites across AU and NZ</span></div>
           <div><strong>Role</strong><span>Analytics Engineer / Power BI Consultant</span></div>
           <div><strong>Engagement</strong><span>Sep 2025 to Present</span></div>
           <div><strong>Tools</strong><span>Fabric (Lakehouse/Warehouse, Direct Lake), Dataflow Gen2, Power BI, DAX, T-SQL, Spark, Power Apps, Power Automate, SharePoint Lists, D365, PayGlobal, Excel, Azure DevOps, Confluence</span></div>
@@ -60,14 +60,14 @@
     <section>
       <div class="container">
         <figure class="case-figure">
-          <img src="../assets/img/projects/healthcare-fabric.svg" alt="Anonymised mock dashboard for the Abano Healthcare enterprise analytics work" loading="lazy" width="1600" height="900" decoding="async">
+          <img src="../assets/img/projects/healthcare-fabric.svg" alt="Anonymised mock dashboard for the enterprise healthcare analytics work" loading="lazy" width="1600" height="900" decoding="async">
           <figcaption><strong>Mock-up:</strong> recreated dashboard structure with anonymised sample data. Shows the layout, KPIs and analytical approach without exposing client data.</figcaption>
         </figure>
         <div class="case-body">
           <article>
             <section>
               <h2>Context</h2>
-              <p>Abano Healthcare supports more than 220 dental practices across Australia and New Zealand. Reporting was fragmented across teams and domains, with inconsistent metric definitions, limited shared modelling and manual validation work, and gaps between source systems, curated reporting tables and final Power BI outputs. Source data spans Microsoft Dynamics 365, PayGlobal and multiple practice-management-system structures. Without a common semantic layer it was difficult to reconcile KPIs or to give leadership a defensible audit path from source to published figure.</p>
+              <p>The client is a large Australasian healthcare organisation supporting more than 200 sites across Australia and New Zealand. Reporting was fragmented across teams and domains, with inconsistent metric definitions, limited shared modelling and manual validation work, and gaps between source systems, curated reporting tables and final Power BI outputs. Source data spans Microsoft Dynamics 365, PayGlobal and multiple practice-management-system structures. Without a common semantic layer it was difficult to reconcile KPIs or to give leadership a defensible audit path from source to published figure.</p>
             </section>
             <section>
               <h2>Business problem</h2>
@@ -93,13 +93,13 @@
               <p>Clinical exception reporting required users to identify, investigate, categorise and comment on exceptions, and every change to a business threshold meant going back to an analyst for a report change. The reporting was creating analyst dependency rather than removing it.</p>
               <p>I built two self-service Clinical Assurance dashboards spanning more than twelve report pages, using page-specific parameters so users can adjust business thresholds themselves without repeated analyst redevelopment. KPI cards, measures, dynamic headings and contextual interpretation text all update immediately when a threshold changes, so the report explains the business meaning of the selected settings as well as the resulting numbers. Automated exception flagging with conditional colouring and exception-only scatter plots replaced a more manual process for locating outliers, making the cases that need investigation materially easier to find.</p>
               <p>I then rebuilt and enhanced a Power App embedded within Power BI to support the investigation workflow itself: case statuses, categorisation and bulk commenting. Where multiple selected cases share the same outcome, bulk updates reduce repetitive update actions by up to approximately 95 per cent, and the investigation results feed back into governed enterprise reporting. Power Automate flows ingest secure Excel input into a SharePoint List and remove or reset SharePoint records, and the operational list is then ingested back into Fabric using Dataflow Gen2 to support a closed-loop analytics workflow.</p>
-              <p>This is the part of the engagement I would point an interviewer at. The dashboard was not the deliverable. The change was to the operational workflow around the analysis.</p>
+              <p>The solution connected exception reporting directly to the investigation workflow, allowing users to identify, categorise and update cases within the same governed process.</p>
             </section>
             <section>
               <h2>Marketing: customer lifetime value, churn and retention</h2>
               <p>Marketing needed to understand the relationship between retention and customer value, but any single definition of churn embeds an assumption. A patient who has not returned in twelve months means something different from one who has not returned in thirty-six, and the right threshold is a business judgement rather than a data one.</p>
               <p>I built end-to-end marketing analytics covering customer demographics, retention, churn, Customer Lifetime Value and basket analysis. Rather than hard-coding one definition, I developed a flexible churn framework with 12, 24 and 36-month churn windows and 3, 6, 9 and 12-month patient cohorts, and designed the analytical logic so a change in churn assumption flows consistently through the related customer-value measures instead of requiring separate report versions.</p>
-              <p>The value is not the DAX. It is that Marketing gained a capability to test stricter or more relaxed churn definitions and immediately see the downstream effect on retention and CLTV, rather than being locked into one static definition of what a customer is worth.</p>
+              <p>The flexible churn framework allowed Marketing to test alternative assumptions and immediately see how they affected retention and customer value, instead of working to one fixed definition of what a customer is worth.</p>
             </section>
             <section>
               <h2>Finance: governed self-service reporting</h2>
@@ -111,8 +111,8 @@
               <p>Workforce reporting relied on static month-end reporting, which answers what the headcount is now but not what it was at an arbitrary past date. I redesigned it using historical snapshots in Fabric so headcount and turnover can be analysed at any historical point in time, and created curated fact and dimension structures with reusable reporting logic to improve workforce metric consistency and historical analysis.</p>
             </section>
             <section>
-              <h2>Enterprise data governance: the Region Master</h2>
-              <p>Location definitions and mapping were inconsistent, which quietly undermines any State or Country level reporting built on top of them. I created and validated a governed practice-region-country mapping across Australia and New Zealand, validated it across both markets, and it was adopted as the Region Master and used to derive consistent State and Country attributes for patient and downstream reporting.</p>
+              <h2>Enterprise data governance: governed master location mapping</h2>
+              <p>Location definitions and mapping were inconsistent, which quietly undermines any State or Country level reporting built on top of them. I created and validated a governed practice-region-country mapping across Australia and New Zealand, validated it across both markets, and it was adopted as the governed master location mapping and used to derive consistent State and Country attributes for patient and downstream reporting.</p>
               <p>This is the clearest example of my work extending past report design into enterprise data governance: a reference asset other people's reporting now depends on.</p>
             </section>
             <section>
@@ -126,7 +126,7 @@
             <section>
               <h2>Outcomes</h2>
               <p>Finance, Marketing, Clinical Assurance and People &amp; Culture now consume governed metrics from a shared Direct Lake semantic model with reusable measures, giving a clear audit path from source through curated layer to published figure, with Australia and New Zealand on shared solutions rather than duplicated logic.</p>
-              <p>What changed for each group is specific. Clinical Assurance users adjust their own thresholds and categorise cases in bulk instead of queuing report changes with an analyst. Marketing can test alternative churn assumptions and see the effect on retention and customer value immediately. Finance works in Excel against governed daily-refreshed enterprise data instead of manual lookups. People &amp; Culture can report headcount and turnover at any historical point rather than only the latest month-end. State and Country reporting resolves consistently through a governed Region Master.</p>
+              <p>What changed for each group is specific. Clinical Assurance users adjust their own thresholds and categorise cases in bulk instead of queuing report changes with an analyst. Marketing can test alternative churn assumptions and see the effect on retention and customer value immediately. Finance works in Excel against governed daily-refreshed enterprise data instead of manual lookups. People &amp; Culture can report headcount and turnover at any historical point rather than only the latest month-end. State and Country reporting resolves consistently through a governed governed master location mapping.</p>
             </section>
             <section>
               <h2>Reflection</h2>
@@ -137,8 +137,8 @@
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Client:</strong> Abano Healthcare</li>
-                <li><strong>Scale:</strong> 220+ practices across AU and NZ</li>
+                <li><strong>Client:</strong> Large Australasian Healthcare Organisation</li>
+                <li><strong>Scale:</strong> 200+ sites across AU and NZ</li>
                 <li><strong>Domains:</strong> Finance, Marketing, Clinical Assurance, People &amp; Culture</li>
                 <li><strong>Model:</strong> 70-table Gold Direct Lake, 10 tables built independently</li>
                 <li><strong>Measures:</strong> 400+ report-specific measures authored</li>

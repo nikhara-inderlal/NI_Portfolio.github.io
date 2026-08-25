@@ -7,16 +7,16 @@
   <link rel="canonical" href="https://nikhara-inderlal.github.io/projects/online-retail-sql.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Database Integrity &amp; Order Validation | Nikhara Inderlal">
+  <meta property="og:title" content="Online Retail Client Engagement: Database Integrity &amp; Order Validation | Nikhara Inderlal">
   <meta property="og:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta property="og:url" content="https://nikhara-inderlal.github.io/projects/online-retail-sql.html">
   <meta property="og:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Database Integrity &amp; Order Validation | Nikhara Inderlal">
+  <meta name="twitter:title" content="Online Retail Client Engagement: Database Integrity &amp; Order Validation | Nikhara Inderlal">
   <meta name="twitter:description" content="Case study by Nikhara Inderlal, Analytics Consultant and Analytics Engineer in Sydney.">
   <meta name="twitter:image" content="https://nikhara-inderlal.github.io/assets/img/nikhara-headshot.jpg">
-  <meta name="description" content="Technical simulation: PostgreSQL database engineering in a simulated e-commerce environment, shifting order and fulfilment data quality from reactive cleansing to preventative enforcement using business rules, constraints, PL/pgSQL functions, event-driven triggers and a central audit log.">
-  <title>Database Integrity &amp; Order Validation | Nikhara Inderlal</title>
+  <meta name="description" content="Client-led technical engagement covering PostgreSQL schema analysis, business rules, database constraints, PL/pgSQL status logic, event-driven triggers and audit logging, shifting order and fulfilment data quality from reactive cleansing to preventative enforcement.">
+  <title>Online Retail Client Engagement: Database Integrity &amp; Order Validation | Nikhara Inderlal</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -46,13 +46,13 @@
     <section class="case-hero">
       <div class="container">
         <a class="case-back" href="../projects.html">Back to projects</a>
-        <span class="eyebrow">Technical simulation &middot; Database engineering and data quality</span>
-        <h1>Database Integrity &amp; Order Validation</h1>
-        <p class="lead">Hands-on PostgreSQL database engineering in a simulated e-commerce environment, moving data quality from reactive cleansing to enforcement at source.</p>
+        <span class="eyebrow">Online retail &middot; Database engineering and data quality</span>
+        <h1>Online Retail Client Engagement: Database Integrity &amp; Order Validation</h1>
+        <p class="lead">A client-led database engineering engagement, moving order and fulfilment data quality from reactive cleansing to enforcement at source.</p>
         <div class="case-meta">
-          <div><strong>Sector</strong><span>Technical simulation, not a commercial client engagement</span></div>
+          <div><strong>Sector</strong><span>Online retail</span></div>
           <div><strong>Role</strong><span>SQL Developer / PostgreSQL / PL-pgSQL</span></div>
-          <div><strong>Engagement</strong><span>Simulated e-commerce environment</span></div>
+          <div><strong>Engagement</strong><span>Requirements gathering through to solution presentation and sign-off</span></div>
           <div><strong>Tools</strong><span>PostgreSQL, PL/pgSQL, DDL, Triggers, Audit logging, DBeaver</span></div>
         </div>
       </div>
@@ -67,42 +67,42 @@
           <article>
             <section>
               <h2>Context</h2>
-              <p>This is a technical simulation rather than a client engagement, built to work through a real database-engineering problem end to end in a simulated e-commerce environment. It is included here because the reasoning is the same as production work: analysing an existing schema, finding where integrity actually breaks, and deciding whether to detect problems or prevent them.</p>
+              <p>Client-led technical engagement delivered against a simulated online retail environment. The underlying environment was simulated, while the requirements gathering, solution development, presentation and stakeholder delivery process followed a real client engagement workflow.</p><p>The problem was a familiar one in order systems. Orders change state in unexpected ways, fulfilment events arrive out of order, and the order header quietly disagrees with the sum of its line items.</p>
             </section>
             <section>
               <h2>Business problem</h2>
-              <p>The scenario is a familiar one. Orders change state in unexpected ways, fulfilment events arrive out of order, and the order header quietly disagrees with the sum of its line items. The usual response is downstream cleansing, which treats the symptom forever and never removes the cause.</p><p>The question I wanted to answer was whether the same class of problem could be pushed back to the point of entry, so invalid transactions are refused rather than detected later.</p>
+              <p>The usual response to this class of problem is downstream cleansing, which treats the symptom indefinitely and never removes the cause. Bad rows still enter the database, and everything built on top of them inherits the error.</p><p>The requirement I took from the client was to identify where integrity actually breaks across orders, line items, financial values and fulfilment status, and to decide whether those problems should be detected after the fact or prevented at the point of entry.</p>
             </section>
             <section>
               <h2>Approach</h2>
-              <p>Analysed the PostgreSQL schema, table relationships, dependencies and order-processing logic to identify where data-quality and integrity risks arise across orders, line items, financial values and fulfilment status. Defined and implemented business rules, validation checks and database constraints covering minimum required fields, dependent attributes and valid status progression.</p><p>Developed PL/pgSQL functions to keep fulfilment and delivery status aligned with the true progression of each order, then built event-driven triggers and alert logic to detect and prevent invalid transactions at source. That is the deliberate shift in this piece of work: from reactive cleansing toward preventative data-quality enforcement.</p><p>Claude AI was used as a technical support tool to accelerate SQL logic development and troubleshooting. Final logic was reviewed, tested and validated before being treated as the project output.</p>
+              <p>Analysed the PostgreSQL schema, table relationships, dependencies and order-processing logic to identify data-quality and integrity risks. Defined and implemented business rules, validation checks and database constraints covering minimum required fields, dependent attributes and valid status progression.</p><p>Developed PL/pgSQL functions to keep fulfilment and delivery status aligned with the true progression of each order, then built event-driven triggers and alert logic to detect and prevent invalid transactions at source, shifting the solution from reactive cleansing toward preventative data-quality enforcement.</p><p>Claude AI was used as a technical support tool to accelerate SQL logic development and troubleshooting. Final logic was reviewed, tested and validated before being treated as the project output.</p>
             </section>
             <section>
               <h2>Modelling &amp; preparation</h2>
-              <p>Created a central audit-log table capturing trigger events, alert type, severity and descriptions, giving full traceability of database-level validation activity. Naming each rule and assigning it a severity is what turns raw trigger output into something prioritised rather than noisy.</p>
+              <p>Created a central audit-log table capturing trigger events, alert type, severity and descriptions, giving full traceability of database-level validation activity. Naming each rule and assigning it a severity turned raw trigger output into a prioritised feed rather than undifferentiated noise.</p>
             </section>
             <section>
               <h2>Validation</h2>
-              <p>Tested each business rule against transactions designed to violate it, confirming the constraint or trigger fired with the correct rule and severity recorded in the audit log, and that valid status progressions were unaffected.</p>
+              <p>Tested each business rule against transactions designed to violate it, confirming the constraint or trigger fired with the correct rule and severity recorded in the audit log, and that valid status progressions passed through unaffected.</p>
             </section>
             <section>
               <h2>Stakeholder delivery &amp; handover</h2>
-              <p>Presented a structured technical walkthrough covering the schema analysis, identified issues, remediation, business rules, triggers, alerts and audit design, and secured stakeholder sign-off on the approach.</p>
+              <p>Presented a structured technical walkthrough to the client covering the schema analysis, identified issues, remediation, business rules, triggers, alerts and audit design, and secured sign-off on the approach.</p>
             </section>
             <section>
               <h2>Outcomes</h2>
-              <p>Invalid transactions are prevented at source rather than corrected downstream, and the audit log provides a complete traceable record of validation activity for analysis of how often each rule fires and why.</p>
+              <p>Invalid transactions are prevented at source rather than corrected downstream, and the audit log provides a traceable record of validation activity showing how often each rule fires and why.</p>
             </section>
             <section>
               <h2>Reflection</h2>
-              <p>The interesting decision was where to put the logic. Detection in the reporting layer is easier to build and permanently insufficient, because the bad data still exists and everything downstream inherits it. Pushing enforcement into constraints and triggers is more work up front and is what actually removes the problem, which is the same argument I make for handling data quality in the curation layer rather than in report-level fixes.</p>
+              <p>The decision that mattered was where to place the logic. Detection in the reporting layer is quicker to build but leaves the bad data in place for everything downstream to inherit. Pushing enforcement into constraints and triggers costs more up front and removes the problem, which is the same reasoning I apply to handling data quality in the curation layer rather than patching it at report level.</p>
             </section>
           </article>
           <aside class="case-sidebar">
             <div class="card">
               <h3>At a glance</h3>
               <ul class="clean">
-                <li><strong>Sector:</strong> Technical simulation, not a commercial client</li>
+                <li><strong>Sector:</strong> Online retail</li>
                 <li><strong>Discipline:</strong> Database engineering and data quality</li>
                 <li><strong>Role:</strong> SQL Developer / PostgreSQL / PL-pgSQL</li>
               </ul>
